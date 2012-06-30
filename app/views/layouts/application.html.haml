@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %title Business Model Canvas
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application", "jquery.jeditable.mini"
+    = csrf_meta_tags
+    
+  %body
+    = render "layouts/header"
+    .container.content
+      .row
+        .span12
+          - flash.each do |key ,value|
+            %div{:class => "alert fade in  alert-#{key == :notice ? "success" : key}"}
+              %a.close{"data-dismiss" => "alert", :href => "#"} ×
+              = value
+              
+          = yield
+    

@@ -1,0 +1,66 @@
+// Example using journal bootswatch
+//
+// First import journal variables
+@import "bootswatch/united/variables";
+
+// Then bootstrap itself
+@import "bootstrap";
+
+// Responsive styles go here in case you want them
+@import "bootstrap-responsive";
+
+// And finally bootswatch style itself
+@import "bootswatch/united/bootswatch";
+
+/*
+ * ---------------------------container------------------------------
+*/
+.content {
+  margin-top: 60px;
+}
+
+/*
+ * ---------------------------canvas------------------------------
+*/
+#canvas [class*="span"] {
+  margin-left: 0px;
+}
+
+#canvas [class*="span"]:nth-of-type(1) {
+  margin-left: 30px;
+}
+
+#canvas .well {
+  margin-bottom: 0px;
+  height: 400px;
+  overflow: auto;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid;
+}
+
+#canvas .well.half {
+  height: 180px;
+  overflow: auto;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid;
+} 
+
+#canvas .well.widen {
+  width: 540px;
+}
+
+#canvas .well.half .editable-textile textarea {
+  height: 100px !important;
+}
+
+#canvas .editable-textile textarea {
+  height: 300px !important;
+}
+
+.row.last {
+  margin-bottom: 30px;
+}
