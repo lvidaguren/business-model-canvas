@@ -1,64 +1,105 @@
 .row
   .span6
     .well
-      Designed for
+      %b Designed for
       #designed_for.edit= session[:designed_for].try(:html_safe)
       
   .span6
     .well
-      Designed by
+      %b Designed by
       #designed_by.edit= session[:designed_by].try(:html_safe)
 
-#canvas
-  .row
-    .span3
-      .well
-        %b Key Partners
-        #key_partners.editable-textile= field_content(:key_partners)
-    
-    .span2
-      .row
-        .span2
-          .well.half
-            %b Key Activities
-            #key_activities.editable-textile= field_content(:key_activities)
-      .row
-        .span2
-          .well.half
-            %b Key Resources
-            #key_resources.editable-textile= field_content(:key_resources)
+.board-outline.resizable.ui-widget-content
+  #board
+    #board-doodles
+    %img#marker.ui-draggable
+      %img#eraser.ui-draggable
+        %table.board-table
+          %tbody
+            %tr
+              %td.col.first{:rowspan => 3, :style => "", :width => "10%"}
+                %h2.editable{:style => ""} 
+                  %span 1
+                  %span
+                    = link_to "Add card", "#", :class => "add_card"
+              
+                %ul
+                
+              %td.col{:style => "", :width => "10%"}
+                %h2.editable{:style => ""} 
+                  %span 1
+                  %span
+                    = link_to "Add card", "#", :class => "add_card"
+              
+                %ul
+              
+              %td.col{:rowspan => 3, :style => "", :width => "10%"}
+                %h2.editable{:style => ""} 
+                  %span 1
+                  %span
+                    = link_to "Add card", "#", :class => "add_card"
+              
+                %ul
+                
+              %td.col{:style => "", :width => "10%"}
+                %h2.editable{:style => ""} 
+                  %span 1
+                  %span
+                    = link_to "Add card", "#", :class => "add_card"
+              
+                %ul
+
+              %td.col{:rowspan => 3, :style => "", :width => "10%"}
+                %h2.editable{:style => ""} 
+                  %span 1
+                  %span
+                    = link_to "Add card", "#", :class => "add_card"
+              
+                %ul
             
-    .span3
-      .well
-        %b Value Propositions
-        #value_propositions.editable-textile= field_content(:value_propositions)
-        
-    .span2
-      .row
-        .span2
-          .well.half
-            %b Customer Relationship
-            #customer_relationship.editable-textile= field_content(:customer_relationship)
-            
-      .row
-        .span2
-          .well.half
-            %b Channels
-            #channels.editable-textile= field_content(:channels)
-            
-    .span3
-      .well
-        %b Customer Segments
-        #customer_segments.editable-textile= field_content(:customer_segments)
-        
-  .row.last     
-    .span6
-      .well
-        %b Cost Structure
-        #cost_structure.editable-textile= field_content(:cost_structure)
-        
-    .span6
-      .well.widen
-        %b Revenue Streams
-        #revenue_streams.editable-textile= field_content(:revenue_streams)
+            %tr
+              %td.separator
+              %td.separator
+                
+            %tr
+              %td.col{:style => "", :width => "10%"}
+                %h2.editable{:style => ""} 
+                  %span 1
+                  %span
+                    = link_to "Add card", "#", :class => "add_card"
+              
+                %ul
+                
+              %td.col{:style => "", :width => "10%"}
+                %h2.editable{:style => ""} 
+                  %span 1
+                  %span
+                    = link_to "Add card", "#", :class => "add_card"
+              
+                %ul
+           
+            %tr
+              %td.separator{:colspan => 5}
+              
+            %tr
+              %td{:colspan => 5}
+                %table.embedded-table
+                  %tbody
+                    %tr
+                      %td.first.col{:style => "", :width => "10%"}
+                        %h2.editable{:style => ""} 
+                          %span 1
+                          %span
+                            = link_to "Add card", "#", :class => "add_card"
+                      
+                        %ul
+                        
+                      %td.col{:style => "", :width => "10%"}
+                        %h2.editable{:style => ""} 
+                          %span 1
+                          %span
+                            = link_to "Add card", "#", :class => "add_card"
+                      
+                        %ul
+
         

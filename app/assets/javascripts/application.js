@@ -12,19 +12,54 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
 // Loads all Bootstrap javascripts
 //= require bootstrap
 
 
 $(document).ready(function() {
+	$( ".resizable" ).resizable({
+		animate: true
+	});
+	
+	$(".embedded-resizable").resizable({
+		animate: true,
+		alsoResize: ".board-outline"
+	});
+	
+	$(".add_card").click(function(){
+		var td = $(this).parent().parent().parent();
+		var ul = td.children("ul").append('<li id=' + new Date().getTime() + '><h2 class="edit">Title #2</h2><p class="editable-textile">Text Content #2</p></li>');
+		ul.children().draggable({containment: "#board"});
+		ul.children().css({position: "absolute", top: ul.parent().position.top, left: ul.parent().position.left});
+		editableStickyNotes();
+		return false;
+	});
+	
+	$( "td" ).droppable({
+		drop: function(event, ui) {
+			var card = ui.draggable;
+			var ul = $(this).children("ul");
+			
+			if($(card).parent() != $(this).children("ul")){
+				ul.append(card);
+				ul.children().draggable({containment: "#board"});
+				$(card).parent().children("#" + card.id).remove();
+				editableStickyNotes();
+			}
+		}
+	});
+	
+});
+
+function editableStickyNotes() {
 	$('.edit').editable('/home/save');
 	
   $(".editable-textile").editable("/home/save", { 
-	  loadurl   : "/home/load",
-	  type      : "textarea",
-	  submit    : "OK",
-	  cancel    : "Cancel",
-	  tooltip   : "Click to edit..."
-  })
-});
+  		loadurl   : "/home/load",
+      type      : 'textarea',
+      onblur    : 'submit',
+      tooltip   : 'Click to edit...',
+      cancel    : 'Cancel'
+  });
+}
+
