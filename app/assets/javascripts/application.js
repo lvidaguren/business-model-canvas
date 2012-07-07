@@ -58,47 +58,47 @@ function editableStickyNotes() {
 }
 
 function addCard(td) {
-		var page = $("#page").val();
-		var ul = td.children("ul").append('<li><h2 class="edit">Card Title</h2><p class="editable-textile"></p></li>');
-		
-		ul.children().draggable({containment: "#board"});
-		ul.children().css({position: "absolute", top: ul.parent().position.top, left: ul.parent().position.left});
-		
-		editableStickyNotes();
-		
-		var card = ul.children().last(); 
-		var board_id = $("#board_id").val();
-		var parameters;
-		
-		if(page == "board") {
-			parameters = {card: {content: "", title: "Card Title", section: td.attr("id"), 
-												   board_left: card.position().left, board_top: card.position().top, board_id: board_id}};	
-		} else {
-			parameters = {card: {content: "", title: "Card Title", section: td.attr("id"), 
-												   section_left: card.position().left, section_top: card.position().top, board_id: board_id}};	
-		}
-																		
-		$.post("/cards/create", parameters, function(data) {card.attr("id", data); /*setting the card id*/});
+	var page = $("#page").val();
+	var ul = td.children("ul").append('<li><h2 class="edit">Card Title</h2><p class="editable-textile"></p></li>');
+	
+	ul.children().draggable({containment: "#board"});
+	ul.children().css({position: "absolute", top: ul.parent().position.top, left: ul.parent().position.left});
+	
+	editableStickyNotes();
+	
+	var card = ul.children().last(); 
+	var board_id = $("#board_id").val();
+	var parameters;
+	
+	if(page == "board") {
+		parameters = {card: {content: "", title: "Card Title", section: td.attr("id"), 
+											   board_left: card.position().left, board_top: card.position().top, board_id: board_id}};	
+	} else {
+		parameters = {card: {content: "", title: "Card Title", section: td.attr("id"), 
+											   section_left: card.position().left, section_top: card.position().top, board_id: board_id}};	
+	}
+																	
+	$.post("/cards/create", parameters, function(data) {card.attr("id", data); /*setting the card id*/});
 }
 
 
 function moveCard(card, cardParent, droppable_area, newLeft, newTop) {
-		var page = $("#page").val();
-		
-		var parameters;
-		
-		if(page == "board") {
-			parameters = {id: card.attr("id"), card: {section: cardParent.parent().attr("id"), board_left: newLeft, board_top: newTop}};	
-		} else {
-			parameters = {id: card.attr("id"), card: {section: cardParent.parent().attr("id"), section_left: newLeft, section_top: newTop}};	
-		}
-		
-		$.post("/cards/update", parameters);
-																	
-		if($(card).parent() != droppable_area.children("ul")){
-			cardParent.append(card);
-			cardParent.children().draggable({containment: "#board"});
-			$(card).parent().children("#" + card.id).remove();
-			editableStickyNotes();
-		}
+	var page = $("#page").val();
+	
+	var parameters;
+	
+	if(page == "board") {
+		parameters = {id: card.attr("id"), card: {section: cardParent.parent().attr("id"), board_left: newLeft, board_top: newTop}};	
+	} else {
+		parameters = {id: card.attr("id"), card: {section: cardParent.parent().attr("id"), section_left: newLeft, section_top: newTop}};	
+	}
+	
+	$.post("/cards/update", parameters);
+																
+	if($(card).parent() != droppable_area.children("ul")){
+		cardParent.append(card);
+		cardParent.children().draggable({containment: "#board"});
+		$(card).parent().children("#" + card.id).remove();
+		editableStickyNotes();
+	}
 }
