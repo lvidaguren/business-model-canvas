@@ -50,7 +50,7 @@ a:hover {
 /*
  * ----------------------Cards---------------------
 */
-ul,li {
+ul, li {
   list-style:none;
 }
 
@@ -114,6 +114,14 @@ ul li:nth-child(5n) {
   -moz-transform:rotate(5deg);
 }
 
+.section ul li {
+  width: 15em;
+  height: 15em;
+}
+
+.section span a {
+  font-size: 15px;
+}
 /*
  * --------------- The board ----------------------
 */
@@ -170,11 +178,15 @@ h1, h1 a {
 h2 { 
   font-family: 'Rock Salt', "Arial Rounded MT Bold", arial, serif;
   color: #5c9db4;
-  font-size: 13px;
+  font-size: 18px;
   text-align: left;
   margin-left: 10px;
 }
- 
+
+h2 a {
+  font-size: 13px;  
+}
+
 .add_card {
   font-family: 'Rock Salt', "Arial Rounded MT Bold", arial, serif;
   font-size: 10px;
@@ -223,6 +235,10 @@ h2 {
   background-image: url('../assets/green-board-line.png');
   background-repeat: repeat-y;
   background-position: left top;
+}
+
+.board-table .section {
+  background-image: none;
 }
 
 .board-table .first, .embedded-table .first{

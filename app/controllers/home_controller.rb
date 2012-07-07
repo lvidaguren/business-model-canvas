@@ -10,4 +10,8 @@ class HomeController < ApplicationController
   def load
     render :text => session[params[:id].to_sym]
   end
+  
+  def section
+    @section_name = params[:handler]
+  end
 end

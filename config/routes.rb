@@ -3,6 +3,7 @@ BuissnessModelCanvas::Application.routes.draw do
 
   post "home/save"
   get "home/load"
+  get "/section/:handler" => "home#section", :as => :section
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

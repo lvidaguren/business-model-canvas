@@ -1,0 +1,18 @@
+.board-outline.resizable.ui-widget-content
+  #board
+    #board-doodles
+    %img#marker.ui-draggable
+      %img#eraser.ui-draggable
+        %table.board-table
+          %tbody
+            %tr
+              %td.col.section{:rowspan => 3, :style => "", :width => "10%"}
+                %h2.editable{:style => ""} 
+                  %span= t(".#{@section_name.underscore}")
+                  %span.icon= image_tag "#{@section_name.underscore}.png"
+                  
+                %span
+                  = link_to "Add card", "#", :class => "add_card"
+              
+                %ul
+              
