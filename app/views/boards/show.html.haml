@@ -2,12 +2,12 @@
   .span6
     .well
       %b Designed for
-      #designed_for.edit= session[:designed_for].try(:html_safe)
+      #designed_for.edit= @board.designed_for
       
   .span6
     .well
       %b Designed by
-      #designed_by.edit= session[:designed_by].try(:html_safe)
+      #designed_by.edit= @board.designed_by
 
 = hidden_field_tag :board_id, @board.id, :id => "board_id" 
 = hidden_field_tag :page, "board", :id => "page"

@@ -9,11 +9,16 @@ class CardsController < ApplicationController
   def destroy
   end
 
-  def edit
-  end
-
   def update
-    card = Card.find(params[:id])
-    card.update_attributes(params[:card])
+    params[:id] =~ /(\d+)/
+    card = Card.find($1)
+    
+    params[:id] =~ /card_(title|content)_(\d+)/
+    if $1
+      card.update_attribute($1, params[:value])
+      render :text => params[:value]    
+    else
+      card.update_attributes(params[:card])  
+    end
   end
 end

@@ -9,4 +9,10 @@ class BoardsController < ApplicationController
     @section_name = params[:handler]
     @cards = @board.cards.where("section = ?", @section_name)
   end
+  
+  def update
+    @board = Board.find(params[:board_id])
+    @board.update_attribute(params[:id], params[:value])
+    render :text => params[:value]
+  end
 end

@@ -11,11 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120707193933) do
+ActiveRecord::Schema.define(:version => 20120707203003) do
 
   create_table "boards", :force => true do |t|
     t.string   "key"
-    t.string   "desgined_by"
+    t.string   "designed_by"
     t.string   "designed_for"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
@@ -28,10 +28,10 @@ ActiveRecord::Schema.define(:version => 20120707193933) do
     t.string   "board_top"
     t.string   "section"
     t.integer  "board_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
     t.string   "section_left"
-    t.string   "section_right"
+    t.string   "section_top"
   end
 
 end

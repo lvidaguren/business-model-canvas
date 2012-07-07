@@ -47,10 +47,11 @@ $(document).ready(function() {
 });
 
 function editableStickyNotes() {
-	$('.edit').editable('/home/save');
+	$(".edit").editable("/boards/" + $("#board_id").val() + "/update");
 	
-  $(".editable-textile").editable("/home/save", { 
-  		loadurl   : "/home/load",
+	$(".editable-title").editable("/cards/update");
+	
+  $(".editable-content").editable("/cards/update", { 
       type      : 'textarea',
       onblur    : 'submit',
       tooltip   : 'Click to edit...'
@@ -59,7 +60,7 @@ function editableStickyNotes() {
 
 function addCard(td) {
 	var page = $("#page").val();
-	var ul = td.children("ul").append('<li><h2 class="edit">Card Title</h2><p class="editable-textile"></p></li>');
+	var ul = td.children("ul").append('<li><h2 class="editable-title">Card Title</h2><p class="editable-content"></p></li>');
 	
 	ul.children().draggable({containment: "#board"});
 	ul.children().css({position: "absolute", top: ul.parent().position.top, left: ul.parent().position.left});
@@ -78,7 +79,11 @@ function addCard(td) {
 											   section_left: card.position().left, section_top: card.position().top, board_id: board_id}};	
 	}
 																	
-	$.post("/cards/create", parameters, function(data) {card.attr("id", data); /*setting the card id*/});
+	$.post("/cards/create", parameters, function(data) {
+																				card.attr("id", data); //setting the card id
+																				card.children("h2").attr("id", "card_title_" + data);
+																				card.children("p").attr("id", "card_content_" + data);
+																			});
 }
 
 
