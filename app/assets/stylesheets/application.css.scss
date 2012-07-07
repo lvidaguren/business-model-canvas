@@ -244,7 +244,7 @@ h2 {
 .ui-state-highlight .ui-icon {background-image: url(../assets/ui-icons_2e83ff_256x240.png); }
 .ui-state-error .ui-icon, .ui-state-error-text .ui-icon {background-image: url(../assets/ui-icons_cd0a0a_256x240.png); }
 
-
+.ui-resizable { position: relative; }
 .ui-resizable-handle { position: absolute;font-size: 0.1px;z-index: 99999; display: block;}
 .ui-resizable-disabled .ui-resizable-handle, .ui-resizable-autohide .ui-resizable-handle { display: none; }
 .ui-resizable-n { cursor: n-resize; height: 7px; width: 100%; top: -5px; left: 0; }
