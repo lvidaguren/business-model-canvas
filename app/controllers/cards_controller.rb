@@ -7,6 +7,9 @@ class CardsController < ApplicationController
   end
 
   def destroy
+    card = Card.find(params[:id])
+    card.destroy
+    render :text => ""
   end
 
   def update

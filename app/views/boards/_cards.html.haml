@@ -1,3 +1,5 @@
 %li{:id => card.id, :style => "position: absolute; left: #{card.send(left)}px; top: #{card.send(top)}px"}
+  .delete
+  .clearance
   %h2.editable-title{:id => "card_title_#{card.id}"}= card.title
   %p.editable-content{:id => "card_content_#{card.id}"}= card.content

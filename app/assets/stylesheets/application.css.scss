@@ -114,6 +114,20 @@ ul li:nth-child(5n) {
   -moz-transform:rotate(5deg);
 }
 
+ul li .delete {
+  background: transparent url(../assets/delete.png) no-repeat top left;
+  cursor: pointer;
+  float: right;
+  height: 14px;
+  width: 14px;
+  margin-top: -20px;
+  margin-right: -20px;
+}
+
+ul li .clearance {
+  clear: both;
+}
+
 .section ul li {
   font-size: 20px;
 }

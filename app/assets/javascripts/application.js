@@ -44,6 +44,8 @@ $(document).ready(function() {
 		}
 	});
 	
+	deleteCard();
+	
 });
 
 function editableStickyNotes() {
@@ -60,12 +62,13 @@ function editableStickyNotes() {
 
 function addCard(td) {
 	var page = $("#page").val();
-	var ul = td.children("ul").append('<li><h2 class="editable-title">Card Title</h2><p class="editable-content"></p></li>');
+	var ul = td.children("ul").append('<li><div class="delete"></div><div class="clearance"></div><h2 class="editable-title">Card Title</h2><p class="editable-content"></p></li>');
 	
 	ul.children().draggable({containment: "#board"});
 	ul.children().css({position: "absolute", top: ul.parent().position.top, left: ul.parent().position.left});
 	
 	editableStickyNotes();
+	deleteCard();
 	
 	var card = ul.children().last(); 
 	var board_id = $("#board_id").val();
@@ -106,4 +109,17 @@ function moveCard(card, cardParent, droppable_area, newLeft, newTop) {
 		$(card).parent().children("#" + card.id).remove();
 		editableStickyNotes();
 	}
+}
+
+function deleteCard() {
+	$(".delete").click(function() {
+		var li = $(this).parent();
+		$.ajax({
+	    url: "/cards/" + li.attr("id"),
+	    type: "DELETE",
+	    success: function(result) {
+	    	li.remove();
+	    }
+		});
+	});
 }

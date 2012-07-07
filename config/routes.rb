@@ -7,7 +7,7 @@ BuissnessModelCanvas::Application.routes.draw do
   
   # Cards
   post "cards/create"
-  delete "cards/destroy/:id" => "cards#destroy"
+  delete "cards/:id" => "cards#destroy"
   post "cards/update" => "cards#update"
 
   root :to => "home#index"
