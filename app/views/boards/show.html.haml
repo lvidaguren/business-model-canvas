@@ -26,7 +26,7 @@
                   %span.icon= image_tag "key_partners.png"
                   
                 %span
-                  = link_to "Add card", "#", :class => "add_card"
+                  = link_to t(".add_card"), "#", :class => "add_card"
                 
                 %ul
                   = render :partial => "cards", :collection => @cards["key_partners"] || [], :as => :card, 
@@ -38,7 +38,7 @@
                   %span.icon= image_tag "key_activities.png"
                   
                 %span
-                  = link_to "Add card", "#", :class => "add_card"
+                  = link_to t(".add_card"), "#", :class => "add_card"
               
                 %ul
                   = render :partial => "cards", :collection => @cards["key_activities"] || [], :as => :card, 
@@ -50,7 +50,7 @@
                   %span.icon= image_tag "value_propositions.png"
                   
                 %span
-                  = link_to "Add card", "#", :class => "add_card"
+                  = link_to t(".add_card"), "#", :class => "add_card"
               
                 %ul
                   = render :partial => "cards", :collection => @cards["value_propositions"] || [], :as => :card, 
@@ -62,7 +62,7 @@
                   %span.icon= image_tag "customer_relationships.png"
                   
                 %span
-                  = link_to "Add card", "#", :class => "add_card"
+                  = link_to t(".add_card"), "#", :class => "add_card"
               
                 %ul
                   = render :partial => "cards", :collection => @cards["customer_relationships"] || [], :as => :card, 
@@ -74,7 +74,7 @@
                   %span.icon= image_tag "customer_segments.png"
                   
                 %span
-                  = link_to "Add card", "#", :class => "add_card"
+                  = link_to t(".add_card"), "#", :class => "add_card"
             
                 %ul
                   = render :partial => "cards", :collection => @cards["customer_segments"] || [], :as => :card, 
@@ -91,7 +91,7 @@
                   %span.icon= image_tag "key_resources.png"
                   
                 %span
-                  = link_to "Add card", "#", :class => "add_card"
+                  = link_to t(".add_card"), "#", :class => "add_card"
               
                 %ul
                   = render :partial => "cards", :collection => @cards["key_resources"] || [], :as => :card, 
@@ -103,7 +103,7 @@
                   %span.icon= image_tag "channels.png"
                   
                 %span
-                  = link_to "Add card", "#", :class => "add_card"
+                  = link_to t(".add_card"), "#", :class => "add_card"
               
                 %ul
                   = render :partial => "cards", :collection => @cards["channels"] || [], :as => :card, 
@@ -123,7 +123,7 @@
                           %span.icon= image_tag "cost_structure.png"
                           
                         %span
-                          = link_to "Add card", "#", :class => "add_card"
+                          = link_to t(".add_card"), "#", :class => "add_card"
                       
                         %ul
                           = render :partial => "cards", :collection => @cards["cost_structure"] || [], :as => :card, 
@@ -135,7 +135,7 @@
                           %span.icon= image_tag "revenue_streams.png"
                           
                         %span
-                          = link_to "Add card", "#", :class => "add_card"
+                          = link_to t(".add_card"), "#", :class => "add_card"
                       
                         %ul
                           = render :partial => "cards", :collection => @cards["revenue_streams"] || [], :as => :card, 
