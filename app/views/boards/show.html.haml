@@ -10,6 +10,7 @@
       #designed_by.edit= session[:designed_by].try(:html_safe)
 
 = hidden_field_tag :board_id, @board.id, :id => "board_id" 
+= hidden_field_tag :page, "board", :id => "page"
 
 .board-outline.resizable.ui-widget-content
   #board
@@ -28,7 +29,8 @@
                   = link_to "Add card", "#", :class => "add_card"
                 
                 %ul
-                  = render :partial => "cards", :collection => @cards["key_partners"] || [], :as => :card
+                  = render :partial => "cards", :collection => @cards["key_partners"] || [], :as => :card, 
+                           :locals => {:left => :board_left, :top => :board_top}
                 
               %td#key_activities.col{:style => "", :width => "10%"}
                 %h2.editable{:style => ""} 
@@ -39,7 +41,8 @@
                   = link_to "Add card", "#", :class => "add_card"
               
                 %ul
-                  = render :partial => "cards", :collection => @cards["key_activities"] || [], :as => :card
+                  = render :partial => "cards", :collection => @cards["key_activities"] || [], :as => :card, 
+                           :locals => {:left => :board_left, :top => :board_top}
               
               %td#value_propositions.col{:rowspan => 3, :style => "", :width => "10%"}
                 %h2.editable{:style => ""} 
@@ -50,7 +53,8 @@
                   = link_to "Add card", "#", :class => "add_card"
               
                 %ul
-                  = render :partial => "cards", :collection => @cards["value_propositions"] || [], :as => :card
+                  = render :partial => "cards", :collection => @cards["value_propositions"] || [], :as => :card, 
+                           :locals => {:left => :board_left, :top => :board_top}
                   
               %td#customer_relationships.col{:style => "", :width => "10%"}
                 %h2.editable{:style => ""} 
@@ -61,7 +65,8 @@
                   = link_to "Add card", "#", :class => "add_card"
               
                 %ul
-                  = render :partial => "cards", :collection => @cards["customer_relationships"] || [], :as => :card
+                  = render :partial => "cards", :collection => @cards["customer_relationships"] || [], :as => :card, 
+                           :locals => {:left => :board_left, :top => :board_top}
 
               %td#customer_segments.col{:rowspan => 3, :style => "", :width => "10%"}
                 %h2.editable{:style => ""} 
@@ -72,7 +77,8 @@
                   = link_to "Add card", "#", :class => "add_card"
             
                 %ul
-                  = render :partial => "cards", :collection => @cards["customer_segments"] || [], :as => :card
+                  = render :partial => "cards", :collection => @cards["customer_segments"] || [], :as => :card, 
+                           :locals => {:left => :board_left, :top => :board_top}
             
             %tr
               %td.separator
@@ -88,7 +94,8 @@
                   = link_to "Add card", "#", :class => "add_card"
               
                 %ul
-                  = render :partial => "cards", :collection => @cards["key_resources"] || [], :as => :card
+                  = render :partial => "cards", :collection => @cards["key_resources"] || [], :as => :card, 
+                           :locals => {:left => :board_left, :top => :board_top}
                   
               %td#channels.col{:style => "", :width => "10%"}
                 %h2.editable{:style => ""} 
@@ -99,7 +106,8 @@
                   = link_to "Add card", "#", :class => "add_card"
               
                 %ul
-                  = render :partial => "cards", :collection => @cards["channels"] || [], :as => :card
+                  = render :partial => "cards", :collection => @cards["channels"] || [], :as => :card, 
+                           :locals => {:left => :board_left, :top => :board_top}
            
             %tr
               %td.separator{:colspan => 5}
@@ -118,7 +126,8 @@
                           = link_to "Add card", "#", :class => "add_card"
                       
                         %ul
-                          = render :partial => "cards", :collection => @cards["cost_structure"] || [], :as => :card
+                          = render :partial => "cards", :collection => @cards["cost_structure"] || [], :as => :card, 
+                           :locals => {:left => :board_left, :top => :board_top}
                         
                       %td#revenue_streams.col{:style => "", :width => "10%"}
                         %h2.editable{:style => ""} 
@@ -129,6 +138,7 @@
                           = link_to "Add card", "#", :class => "add_card"
                       
                         %ul
-                          = render :partial => "cards", :collection => @cards["revenue_streams"] || [], :as => :card
+                          = render :partial => "cards", :collection => @cards["revenue_streams"] || [], :as => :card, 
+                           :locals => {:left => :board_left, :top => :board_top}
 
         

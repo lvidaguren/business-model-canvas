@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120707171112) do
+ActiveRecord::Schema.define(:version => 20120707193933) do
 
   create_table "boards", :force => true do |t|
     t.string   "key"
@@ -24,12 +24,14 @@ ActiveRecord::Schema.define(:version => 20120707171112) do
   create_table "cards", :force => true do |t|
     t.text     "content"
     t.string   "title"
-    t.string   "left"
-    t.string   "top"
+    t.string   "board_left"
+    t.string   "board_top"
     t.string   "section"
     t.integer  "board_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.string   "section_left"
+    t.string   "section_right"
   end
 
 end

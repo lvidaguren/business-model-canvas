@@ -1,4 +1,5 @@
 = hidden_field_tag :board_id, @board.id, :id => "board_id" 
+= hidden_field_tag :page, "section", :id => "page"
 
 .board-outline.resizable.ui-widget-content
   #board
@@ -17,4 +18,5 @@
                   = link_to "Add card", "#", :class => "add_card"
               
                 %ul
-                  = render :partial => "cards", :collection => @cards, :as => :card
+                  = render :partial => "cards", :collection => @cards, :as => :card,
+                           :locals => {:left => "section_left", :top => "section_top"}
