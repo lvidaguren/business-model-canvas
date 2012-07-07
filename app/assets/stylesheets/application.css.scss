@@ -245,7 +245,7 @@ h2 a {
   vertical-align: top;
   height: 300px;
   xopacity: 1;
-  background-image: url('../assets/green-board-line.png');
+  background-image: url('../assets/separator.png');
   background-repeat: repeat-y;
   background-position: left top;
 }
@@ -264,7 +264,7 @@ h2 a {
 
 .separator {
   height: 5px !important;
-  background-image: url('../assets/green-board-horizontal-line.png') !important;
+  background-image: url('../assets/separator-horizontal.png') !important;
   background-repeat: repeat-x !important;
 }
 
