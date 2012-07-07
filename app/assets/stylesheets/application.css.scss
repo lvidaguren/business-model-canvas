@@ -50,15 +50,15 @@ a:hover {
 /*
  * ----------------------Cards---------------------
 */
-ul,li{
+ul,li {
   list-style:none;
 }
 
-ul{
+ul {
   overflow:hidden;
 }
 
-ul li{
+ul li {
   text-decoration:none;
   color:#000;
   background:#ffc;
@@ -74,42 +74,41 @@ ul li{
   -webkit-transition:-webkit-transform .15s linear;
 }
 
-ul li{
-  margin:1em;
+ul li {
   float:left;
   z-index: 9999;
 }
 
-ul li h2{
+ul li h2 {
   font-size:80%;
   font-weight:bold;
   padding-bottom:10px;
 }
 
-ul li p{
+ul li p {
   font-family:"Reenie Beanie",arial,sans-serif;
   font-size:100%;
 }
 
-ul li{
+ul li {
   -webkit-transform: rotate(-6deg);
   -o-transform: rotate(-6deg);
   -moz-transform:rotate(-6deg);
 }
 
-ul li:nth-child(even){
+ul li:nth-child(even) {
   -o-transform:rotate(4deg);
   -webkit-transform:rotate(4deg);
   -moz-transform:rotate(4deg);
 }
 
-ul li:nth-child(3n){
+ul li:nth-child(3n) {
   -o-transform:rotate(-3deg);
   -webkit-transform:rotate(-3deg);
   -moz-transform:rotate(-3deg);
 }
 
-ul li:nth-child(5n){
+ul li:nth-child(5n) {
   -o-transform:rotate(5deg);
   -webkit-transform:rotate(5deg);
   -moz-transform:rotate(5deg);
@@ -171,13 +170,19 @@ h1, h1 a {
 h2 { 
   font-family: 'Rock Salt', "Arial Rounded MT Bold", arial, serif;
   color: #5c9db4;
-  font-size: 18px;
+  font-size: 13px;
+  text-align: left;
+  margin-left: 10px;
 }
  
 .add_card {
+  font-family: 'Rock Salt', "Arial Rounded MT Bold", arial, serif;
   font-size: 10px;
-  float: right;
   text-decoration: none;
+}
+
+.icon {
+  float: right;
 }
 
 .hover .content {

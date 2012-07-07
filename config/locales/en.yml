@@ -2,4 +2,13 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  key_partners: "Key Partners"
+  key_activities: "Key Activities"
+  value_propositions: "Value Propositions"
+  customer_relationships: "Customer Relationships"
+  customer_segments: "Customer Segments"
+  key_resources: "Key Resources"
+  channels: "Channels"
+  cost_structure: "Cost Structure"
+  revenue_streams: "Revenue Streams"
+  
