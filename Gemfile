@@ -25,6 +25,7 @@ end
 gem 'jquery-rails'
 
 gem 'RedCloth'
+gem 'base32-crockford'
 
 group :production do
   gem 'pg'

@@ -1,0 +1,134 @@
+.row
+  .span6
+    .well
+      %b Designed for
+      #designed_for.edit= session[:designed_for].try(:html_safe)
+      
+  .span6
+    .well
+      %b Designed by
+      #designed_by.edit= session[:designed_by].try(:html_safe)
+
+= hidden_field_tag :board_id, @board.id, :id => "board_id" 
+
+.board-outline.resizable.ui-widget-content
+  #board
+    #board-doodles
+    %img#marker.ui-draggable
+      %img#eraser.ui-draggable
+        %table.board-table
+          %tbody
+            %tr
+              %td#key_partners.col.first{:rowspan => 3, :style => "", :width => "10%"}
+                %h2.editable{:style => ""} 
+                  %span= link_to t(".key_partners"), section_path(@board.key, :key_partners)
+                  %span.icon= image_tag "key_partners.png"
+                  
+                %span
+                  = link_to "Add card", "#", :class => "add_card"
+                
+                %ul
+                  = render :partial => "cards", :collection => @cards["key_partners"] || [], :as => :card
+                
+              %td#key_activities.col{:style => "", :width => "10%"}
+                %h2.editable{:style => ""} 
+                  %span= link_to t(".key_activities"), section_path(@board.key, :key_activities)
+                  %span.icon= image_tag "key_activities.png"
+                  
+                %span
+                  = link_to "Add card", "#", :class => "add_card"
+              
+                %ul
+                  = render :partial => "cards", :collection => @cards["key_activities"] || [], :as => :card
+              
+              %td#value_propositions.col{:rowspan => 3, :style => "", :width => "10%"}
+                %h2.editable{:style => ""} 
+                  %span= link_to t(".value_propositions"), section_path(@board.key, :value_propositions)
+                  %span.icon= image_tag "value_proposition.png"
+                  
+                %span
+                  = link_to "Add card", "#", :class => "add_card"
+              
+                %ul
+                  = render :partial => "cards", :collection => @cards["value_propositions"] || [], :as => :card
+                  
+              %td#customer_relationships.col{:style => "", :width => "10%"}
+                %h2.editable{:style => ""} 
+                  %span= link_to t(".customer_relationships"), section_path(@board.key, :customer_relationships)
+                  %span.icon= image_tag "customer_relationships.png"
+                  
+                %span
+                  = link_to "Add card", "#", :class => "add_card"
+              
+                %ul
+                  = render :partial => "cards", :collection => @cards["customer_relationships"] || [], :as => :card
+
+              %td#customer_segments.col{:rowspan => 3, :style => "", :width => "10%"}
+                %h2.editable{:style => ""} 
+                  %span= link_to t(".customer_segments"), section_path(@board.key, :customer_segments)
+                  %span.icon= image_tag "customer_segments.png"
+                  
+                %span
+                  = link_to "Add card", "#", :class => "add_card"
+            
+                %ul
+                  = render :partial => "cards", :collection => @cards["customer_segments"] || [], :as => :card
+            
+            %tr
+              %td.separator
+              %td.separator
+                
+            %tr
+              %td#key_resources.col{:style => "", :width => "10%"}
+                %h2.editable{:style => ""} 
+                  %span= link_to t(".key_resources"), section_path(@board.key, :key_resources)
+                  %span.icon= image_tag "key_resources.png"
+                  
+                %span
+                  = link_to "Add card", "#", :class => "add_card"
+              
+                %ul
+                  = render :partial => "cards", :collection => @cards["key_resources"] || [], :as => :card
+                  
+              %td#channels.col{:style => "", :width => "10%"}
+                %h2.editable{:style => ""} 
+                  %span= link_to t(".channels"), section_path(@board.key, :channels)
+                  %span.icon= image_tag "channels.png"
+                  
+                %span
+                  = link_to "Add card", "#", :class => "add_card"
+              
+                %ul
+                  = render :partial => "cards", :collection => @cards["channels"] || [], :as => :card
+           
+            %tr
+              %td.separator{:colspan => 5}
+              
+            %tr
+              %td{:colspan => 5}
+                %table.embedded-table
+                  %tbody
+                    %tr
+                      %td#cost_structure.first.col{:style => "", :width => "10%"}
+                        %h2.editable{:style => ""} 
+                          %span= link_to t(".cost_structure"), section_path(@board.key, :cost_structure)
+                          %span.icon= image_tag "cost_structure.png"
+                          
+                        %span
+                          = link_to "Add card", "#", :class => "add_card"
+                      
+                        %ul
+                          = render :partial => "cards", :collection => @cards["cost_structure"] || [], :as => :card
+                        
+                      %td#revenue_streams.col{:style => "", :width => "10%"}
+                        %h2.editable{:style => ""} 
+                          %span= link_to t(".revenue_streams"), section_path(@board.key, :revenue_streams)
+                          %span.icon= image_tag "revenue_streams.png"
+                          
+                        %span
+                          = link_to "Add card", "#", :class => "add_card"
+                      
+                        %ul
+                          = render :partial => "cards", :collection => @cards["revenue_streams"] || [], :as => :card
+
+        

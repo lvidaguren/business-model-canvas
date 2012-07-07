@@ -28,20 +28,35 @@ $(document).ready(function() {
 		alsoResize: ".board-outline"
 	});
 	
+	$("#board ul li").draggable({containment: "#board"});
+	
 	$(".add_card").click(function(){
 		var td = $(this).parent().parent();
-		var ul = td.children("ul").append('<li id=' + new Date().getTime() + '><h2 class="edit">Title #2</h2><p class="editable-textile">Text Content #2</p></li>');
+		var ul = td.children("ul").append('<li><h2 class="edit">Card Title</h2><p class="editable-textile"></p></li>');
+		
 		ul.children().draggable({containment: "#board"});
 		ul.children().css({position: "absolute", top: ul.parent().position.top, left: ul.parent().position.left});
+		
 		editableStickyNotes();
+		
+		var card = ul.children().last(); 
+		var board_id = $("#board_id").val();
+		$.post("/cards/create", {card: {content: "", title: "Card Title", section: td.attr("id"), 
+																		left: card.position().left, top: card.position().top, board_id: board_id}}, function(data) {
+																			card.attr("id", data); // setting the card it
+																		});
+		
 		return false;
 	});
 	
-	$( "td" ).droppable({
+	$("td").droppable({
 		drop: function(event, ui) {
 			var card = ui.draggable;
 			var ul = $(this).children("ul");
 			
+			$.post("/cards/update", {id: card.attr("id"), card: {section: ul.parent().attr("id"), left: ui.helper.position().left, 
+																													top: ui.helper.position().top}});
+																		
 			if($(card).parent() != $(this).children("ul")){
 				ul.append(card);
 				ul.children().draggable({containment: "#board"});

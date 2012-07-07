@@ -1,3 +1,5 @@
+= hidden_field_tag :board_id, @board.id, :id => "board_id" 
+
 .board-outline.resizable.ui-widget-content
   #board
     #board-doodles
@@ -6,13 +8,13 @@
         %table.board-table
           %tbody
             %tr
-              %td.col.section{:rowspan => 3, :style => "", :width => "10%"}
+              %td.col.section{:rowspan => 3, :style => "", :width => "10%", :id => @section_name}
                 %h2.editable{:style => ""} 
-                  %span= t(".#{@section_name.underscore}")
-                  %span.icon= image_tag "#{@section_name.underscore}.png"
+                  %span= t(".#{@section_name}")
+                  %span.icon= image_tag "#{@section_name}.png"
                   
                 %span
                   = link_to "Add card", "#", :class => "add_card"
               
                 %ul
-              
+                  = render :partial => "cards", :collection => @cards, :as => :card

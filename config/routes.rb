@@ -1,9 +1,16 @@
 BuissnessModelCanvas::Application.routes.draw do
-  root :to => "home#index"
+  get "boards/:key" => "boards#show", :as => :board
 
+  post "cards/create"
+  delete "cards/destroy/:id" => "cards#destroy"
+  get "cards/edit/:id"  => "cards#edit"
+  post "cards/update" => "cards#update"
+
+  root :to => "home#index"
+  
   post "home/save"
   get "home/load"
-  get "/section/:handler" => "home#section", :as => :section
+  get "board/:key/section/:handler" => "boards#section", :as => :section
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

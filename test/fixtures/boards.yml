@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  key: MyString
+  desgined_by: MyString
+  designed_for: MyString
+
+two:
+  key: MyString
+  desgined_by: MyString
+  designed_for: MyString
