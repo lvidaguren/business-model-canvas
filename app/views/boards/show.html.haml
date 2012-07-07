@@ -30,7 +30,7 @@
                 
                 %ul
                   = render :partial => "cards", :collection => @cards["key_partners"] || [], :as => :card, 
-                           :locals => {:left => :board_left, :top => :board_top}
+                           :locals => {:left => :board_left, :top => :board_top, :truncate => true}
                 
               %td#key_activities.col{:style => "", :width => "10%"}
                 %h2.editable{:style => ""} 
@@ -42,7 +42,7 @@
               
                 %ul
                   = render :partial => "cards", :collection => @cards["key_activities"] || [], :as => :card, 
-                           :locals => {:left => :board_left, :top => :board_top}
+                           :locals => {:left => :board_left, :top => :board_top, :truncate => true}
               
               %td#value_propositions.col{:rowspan => 3, :style => "", :width => "10%"}
                 %h2.editable{:style => ""} 
@@ -54,7 +54,7 @@
               
                 %ul
                   = render :partial => "cards", :collection => @cards["value_propositions"] || [], :as => :card, 
-                           :locals => {:left => :board_left, :top => :board_top}
+                           :locals => {:left => :board_left, :top => :board_top, :truncate => true}
                   
               %td#customer_relationships.col{:style => "", :width => "10%"}
                 %h2.editable{:style => ""} 
@@ -66,7 +66,7 @@
               
                 %ul
                   = render :partial => "cards", :collection => @cards["customer_relationships"] || [], :as => :card, 
-                           :locals => {:left => :board_left, :top => :board_top}
+                           :locals => {:left => :board_left, :top => :board_top, :truncate => true}
 
               %td#customer_segments.col{:rowspan => 3, :style => "", :width => "10%"}
                 %h2.editable{:style => ""} 
@@ -78,7 +78,7 @@
             
                 %ul
                   = render :partial => "cards", :collection => @cards["customer_segments"] || [], :as => :card, 
-                           :locals => {:left => :board_left, :top => :board_top}
+                           :locals => {:left => :board_left, :top => :board_top, :truncate => true}
             
             %tr
               %td.separator
@@ -95,7 +95,7 @@
               
                 %ul
                   = render :partial => "cards", :collection => @cards["key_resources"] || [], :as => :card, 
-                           :locals => {:left => :board_left, :top => :board_top}
+                           :locals => {:left => :board_left, :top => :board_top, :truncate => true}
                   
               %td#channels.col{:style => "", :width => "10%"}
                 %h2.editable{:style => ""} 
@@ -107,7 +107,7 @@
               
                 %ul
                   = render :partial => "cards", :collection => @cards["channels"] || [], :as => :card, 
-                           :locals => {:left => :board_left, :top => :board_top}
+                           :locals => {:left => :board_left, :top => :board_top, :truncate => true}
            
             %tr
               %td.separator{:colspan => 5}
@@ -127,7 +127,7 @@
                       
                         %ul
                           = render :partial => "cards", :collection => @cards["cost_structure"] || [], :as => :card, 
-                           :locals => {:left => :board_left, :top => :board_top}
+                           :locals => {:left => :board_left, :top => :board_top, :truncate => true}
                         
                       %td#revenue_streams.col{:style => "", :width => "10%"}
                         %h2.editable{:style => ""} 
@@ -139,6 +139,6 @@
                       
                         %ul
                           = render :partial => "cards", :collection => @cards["revenue_streams"] || [], :as => :card, 
-                           :locals => {:left => :board_left, :top => :board_top}
+                           :locals => {:left => :board_left, :top => :board_top, :truncate => true}
 
         
