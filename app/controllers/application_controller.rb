@@ -6,13 +6,13 @@ class ApplicationController < ActionController::Base
   def board
     if params[:key]
       @board = Board.find_by_key(params[:key])
-    else
+    elsif params[:board_id]
       @board = Board.find(params[:board_id])
     end
   end
   
   def set_locale
-    I18n.locale = params[:locale] || @board.locale
+    I18n.locale = params[:locale] || @board.try(:locale) || I18n.default_locale
   end
   
   def default_url_options(options={})
