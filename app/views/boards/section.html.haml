@@ -12,8 +12,8 @@
           %tbody
             %tr
               %td.col.section{:rowspan => 3, :style => "", :width => "10%", :id => @section_name}
-                %h2.editable{:style => ""} 
-                  %span= t(".#{@section_name}")
+                %h2 
+                  %span.section-title= t(".#{@section_name}")
                   %span.icon= image_tag "#{@section_name}.png"
                   
                 %span
