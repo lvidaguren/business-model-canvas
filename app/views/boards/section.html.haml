@@ -17,7 +17,7 @@
                   %span.icon= image_tag "#{@section_name}.png"
                   
                 %span
-                  = link_to "Add card", "#", :class => "add_card"
+                  = link_to t(".add_card"), "#", :class => "add_card"
               
                 %ul
                   = render :partial => "cards", :collection => @cards, :as => :card,

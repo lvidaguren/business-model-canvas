@@ -1,0 +1,37 @@
+ar:
+  layouts:
+    header:
+      languages: "اللغات"
+      select_language: "اختر لغة"
+       
+  boards:
+    show:
+      key_partners: "الشركاء الرئيسيين"
+      key_activities: "الأنشطة الرئيسية"
+      value_propositions: "قيمة المقترحات"
+      customer_relationships: "علاقات العملاء"
+      customer_segments: "قطاعات العملاء"
+      key_resources: "الموارد"
+      channels: "القنوات"
+      cost_structure: "التكلفة"
+      revenue_streams: "الإيرادات"
+      
+      add_card: "أضف كارت"
+      
+      designed_for: "صممت لمشروع"
+      designed_by: "صممت بواسطة"
+      
+    section:
+      key_partners: "الشركاء الرئيسيين"
+      key_activities: "الأنشطة الرئيسية"
+      value_propositions: "قيمة المقترحات"
+      customer_relationships: "علاقات العملاء"
+      customer_segments: "قطاعات العملاء"
+      key_resources: "الموارد"
+      channels: "القنوات"
+      cost_structure: "التكلفة"
+      revenue_streams: "الإيرادات"
+      
+      add_card: "أضف كارت"
+  
+  

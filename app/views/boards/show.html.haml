@@ -1,12 +1,12 @@
 .row
   .span6
     .well
-      %b Designed for
+      %b= t(".designed_for")
       #designed_for.edit= @board.designed_for
       
   .span6
     .well
-      %b Designed by
+      %b= t(".designed_by")
       #designed_by.edit= @board.designed_by
 
 = hidden_field_tag :board_id, @board.id, :id => "board_id" 

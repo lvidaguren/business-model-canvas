@@ -2,16 +2,38 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  layouts:
+    header:
+      languages: "Languages"
+      select_language: "Select language"
+      
   boards:
     show:
-        key_partners: "Key Partners"
-        key_activities: "Key Activities"
-        value_propositions: "Value Propositions"
-        customer_relationships: "Customer Relationships"
-        customer_segments: "Customer Segments"
-        key_resources: "Key Resources"
-        channels: "Channels"
-        cost_structure: "Cost Structure"
-        revenue_streams: "Revenue Streams"
-        add_card: "Add Card"
+      key_partners: "Key Partners"
+      key_activities: "Key Activities"
+      value_propositions: "Value Propositions"
+      customer_relationships: "Customer Relationships"
+      customer_segments: "Customer Segments"
+      key_resources: "Key Resources"
+      channels: "Channels"
+      cost_structure: "Cost Structure"
+      revenue_streams: "Revenue Streams"
+      
+      add_card: "Add Card"
+      
+      designed_for: "Designed for"
+      designed_by: "Designed by"
+   
+    section:
+      key_partners: "Key Partners"
+      key_activities: "Key Activities"
+      value_propositions: "Value Propositions"
+      customer_relationships: "Customer Relationships"
+      customer_segments: "Customer Segments"
+      key_resources: "Key Resources"
+      channels: "Channels"
+      cost_structure: "Cost Structure"
+      revenue_streams: "Revenue Streams"
+      
+      add_card: "Add Card"
   

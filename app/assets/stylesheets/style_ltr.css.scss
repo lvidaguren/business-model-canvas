@@ -1,0 +1,30 @@
+/*
+ * ----------------------Cards---------------------
+*/
+#board ul li .delete {
+  float: right;
+  margin-right: -20px;
+}
+
+
+/*
+ * ----------------------Board---------------------
+*/
+#board {
+  h2 { 
+    text-align: left;
+  }
+  
+  h2 a {
+    font-size: 13px; 
+  }
+  
+  .add_card {
+    font-family: 'Rock Salt', "Arial Rounded MT Bold", arial, serif;
+    font-size: 10px;
+  }
+}
+
+.icon {
+  float: right;
+}
