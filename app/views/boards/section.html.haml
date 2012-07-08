@@ -1,6 +1,8 @@
 = hidden_field_tag :board_id, @board.id, :id => "board_id" 
 = hidden_field_tag :page, "section", :id => "page"
 
+= link_to image_tag("left.png"), board_path(@board.key)
+
 .board-outline.resizable.ui-widget-content
   #board
     #board-doodles
