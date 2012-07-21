@@ -1,21 +1,25 @@
 BuissnessModelCanvas::Application.routes.draw do
   
-  devise_for :users, :controllers => { :omniauth_callbacks => 'users/omniauth_callbacks' }
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' } 
+  
+  devise_scope :user do
+    get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
+  end
   
   # Board
-  get "boards/:key" => "boards#show", :as => :board
-  post "boards/:board_id/update" => "boards#update"
-  get "board/:key/section/:handler" => "boards#section", :as => :section
+  get 'boards/:key' => 'boards#show', :as => :board
+  post 'boards/:board_id/update' => 'boards#update'
+  get 'board/:key/section/:handler' => 'boards#section', :as => :section
   
   # Cards
-  post "cards/create"
-  delete "cards/:id" => "cards#destroy"
-  post "cards/update" => "cards#update"
+  post 'cards/create'
+  delete 'cards/:id' => 'cards#destroy'
+  post 'cards/update' => 'cards#update'
 
-  root :to => "home#index"
+  root :to => 'home#index'
   
-  post "home/save"
-  get "home/load"
+  post 'home/save'
+  get 'home/load'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
