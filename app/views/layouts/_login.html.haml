@@ -1,0 +1,10 @@
+#login.modal.hide.fade.in
+  .modal-header
+    %button.close{"data-dismiss" => "modal", :type => "button"} ×
+    %h3= t("layouts.header.login")
+    
+  .modal-body
+    %table.languages
+      %tr
+        %td
+          = link_to(image_tag('google.png'), user_omniauth_authorize_path(:google_oauth2))

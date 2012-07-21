@@ -6,6 +6,7 @@ en:
     header:
       languages: "Languages"
       select_language: "Select language"
+      welcome: "Welcome %{email}"
       
   boards:
     show:

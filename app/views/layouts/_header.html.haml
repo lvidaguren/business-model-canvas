@@ -11,5 +11,13 @@
         
         .nav-collapse
           %ul.nav.pull-right
-            %li= link_to t(".languages"), "#language", :onclick => "return false;", "data-toggle" => "modal", :id => "language-menu"
-            = render "layouts/languages" 
+            %li
+              = link_to t(".languages"), "#language", :onclick => "return false;", "data-toggle" => "modal", :id => "language-menu"
+              = render "layouts/languages" 
+            
+            %li
+              - if user_signed_in?
+                = link_to t('.welcome', email: current_user.email), '#'
+              - else
+                = link_to t(".login"), "#login", :onclick => "return false;", "data-toggle" => "modal", :id => "login-menu"
+                = render "layouts/login"

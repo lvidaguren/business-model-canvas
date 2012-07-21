@@ -7,6 +7,9 @@ gem 'rails', '3.2.6'
 
 gem 'mysql2'
 gem 'haml'
+gem 'devise'
+gem 'devise_invitable'
+gem 'omniauth-google-oauth2'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -30,6 +33,7 @@ gem 'base32-crockford'
 group :production do
   gem 'pg'
 end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
