@@ -1,0 +1,9 @@
+- if object.errors.any?
+  .alert.fade.in.alert-error
+    %a.close{"data-dismiss" => "alert", :href => "#"} ×
+    %h2
+      = "#{pluralize(object.errors.count, 'error')} prohibited this #{object.class.to_s.humanize} from being saved:"
+    %ul
+      - object.errors.full_messages.each do |msg|
+        %li
+          = msg

@@ -4,40 +4,54 @@
 en:
   layouts:
     header:
-      languages: "Languages"
-      select_language: "Select language"
-      welcome: "Welcome %{email}"
+      languages: 'Languages'
+      select_language: 'Select language'
+      welcome: 'Welcome %{email}'
     
     login:
-      signin: "Sign in"
+      signin: 'Sign in'
+      sign_up: 'Sign up'
       
   boards:
     show:
-      key_partners: "Key Partners"
-      key_activities: "Key Activities"
-      value_propositions: "Value Propositions"
-      customer_relationships: "Customer Relationships"
-      customer_segments: "Customer Segments"
-      key_resources: "Key Resources"
-      channels: "Channels"
-      cost_structure: "Cost Structure"
-      revenue_streams: "Revenue Streams"
+      key_partners: 'Key Partners'
+      key_activities: 'Key Activities'
+      value_propositions: 'Value Propositions'
+      customer_relationships: 'Customer Relationships'
+      customer_segments: 'Customer Segments'
+      key_resources: 'Key Resources'
+      channels: 'Channels'
+      cost_structure: 'Cost Structure'
+      revenue_streams: 'Revenue Streams'
       
-      add_card: "Add Card"
+      add_card: 'Add Card'
       
-      designed_for: "Designed for"
-      designed_by: "Designed by"
+      designed_for: 'Designed for'
+      designed_by: 'Designed by'
    
     section:
-      key_partners: "Key Partners"
-      key_activities: "Key Activities"
-      value_propositions: "Value Propositions"
-      customer_relationships: "Customer Relationships"
-      customer_segments: "Customer Segments"
-      key_resources: "Key Resources"
-      channels: "Channels"
-      cost_structure: "Cost Structure"
-      revenue_streams: "Revenue Streams"
+      key_partners: 'Key Partners'
+      key_activities: 'Key Activities'
+      value_propositions: 'Value Propositions'
+      customer_relationships: 'Customer Relationships'
+      customer_segments: 'Customer Segments'
+      key_resources: 'Key Resources'
+      channels: 'Channels'
+      cost_structure: 'Cost Structure'
+      revenue_streams: 'Revenue Streams'
       
-      add_card: "Add Card"
+      add_card: 'Add Card'
   
+    activerecord:
+      attributes:
+        user:
+          email: 'Email'
+          password: ' Password'
+          password_confirmation: 'Confirmation password'
+          remember_me: 'Remember me'
+          current_password: 'Current password'
+          
+  actions:
+    back: 'Back'
+    are_you_sure: 'Are you sure?'
+    

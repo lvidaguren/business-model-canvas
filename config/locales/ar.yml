@@ -1,50 +1,56 @@
 ar:
   layouts:
     header:
-      languages: "اللغات"
-      select_language: "اختر لغة"
-      welcome: "%{email} أهلاَ"
-      login: "تسجيل الدخول"
+      languages: 'اللغات'
+      select_language: 'اختر لغة'
+      welcome: '%{email} أهلاَ'
+      login: 'تسجيل الدخول'
       
     login:
-      signin: "تسجيل الدخول"
+      signin: 'تسجيل الدخول'
+      sign_up: 'إنشاء حساب'
       
   boards:
     show:
-      key_partners: "الشركاء الرئيسيين"
-      key_activities: "الأنشطة الرئيسية"
-      value_propositions: "قيمة المقترحات"
-      customer_relationships: "علاقات العملاء"
-      customer_segments: "قطاعات العملاء"
-      key_resources: "الموارد"
-      channels: "القنوات"
-      cost_structure: "التكلفة"
-      revenue_streams: "الإيرادات"
+      key_partners: 'الشركاء الرئيسيين'
+      key_activities: 'الأنشطة الرئيسية'
+      value_propositions: 'قيمة المقترحات'
+      customer_relationships: 'علاقات العملاء'
+      customer_segments: 'قطاعات العملاء'
+      key_resources: 'الموارد'
+      channels: 'القنوات'
+      cost_structure: 'التكلفة'
+      revenue_streams: 'الإيرادات'
       
-      add_card: "أضف كارت"
+      add_card: 'أضف كارت'
       
-      designed_for: "صممت لمشروع"
-      designed_by: "صممت بواسطة"
+      designed_for: 'صممت لمشروع'
+      designed_by: 'صممت بواسطة'
       
     section:
-      key_partners: "الشركاء الرئيسيين"
-      key_activities: "الأنشطة الرئيسية"
-      value_propositions: "قيمة المقترحات"
-      customer_relationships: "علاقات العملاء"
-      customer_segments: "قطاعات العملاء"
-      key_resources: "الموارد"
-      channels: "القنوات"
-      cost_structure: "التكلفة"
-      revenue_streams: "الإيرادات"
+      key_partners: 'الشركاء الرئيسيين'
+      key_activities: 'الأنشطة الرئيسية'
+      value_propositions: 'قيمة المقترحات'
+      customer_relationships: 'علاقات العملاء'
+      customer_segments: 'قطاعات العملاء'
+      key_resources: 'الموارد'
+      channels: 'القنوات'
+      cost_structure: 'التكلفة'
+      revenue_streams: 'الإيرادات'
       
-      add_card: "أضف كارت"
+      add_card: 'أضف كارت'
       
   activerecord:
     attributes:
       user:
-        email: "البريد اﻷلكترونى"
-        password: " كلمة المرور"
-        password_confirmation: "تأكيد كلمة المرور"
-        remember_me: "تذكرنى"
+        email: 'البريد اﻷلكترونى'
+        password: ' كلمة المرور'
+        password_confirmation: 'تأكيد كلمة المرور'
+        remember_me: 'تذكرنى'
+        current_password: 'كلمة السر الحالية'
+        
+  actions:
+    back: 'رجوع'
+    are_you_sure: 'هل أنت متأكد؟'
   
   
