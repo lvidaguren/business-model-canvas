@@ -2,22 +2,22 @@
   .navbar.navbar.relative-position
     .navbar-inner
       .container
-        %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+        %a.btn.btn-navbar{'data-target' => '.nav-collapse', 'data-toggle' => 'collapse'}
           %span.icon-bar
           %span.icon-bar
           %span.icon-bar
           
-        = link_to "Business Model Canvas", root_path, :class => "brand"
+        = link_to 'Business Model Canvas', root_path, class: 'brand'
         
         .nav-collapse
           %ul.nav.pull-right
             %li
-              = link_to t(".languages"), "#language", :onclick => "return false;", "data-toggle" => "modal", :id => "language-menu"
-              = render "layouts/languages" 
+              = link_to t('.languages'), '#language', onclick: 'return false;', 'data-toggle' => 'modal', class: 'menu-item'
+              = render 'layouts/languages' 
             
             %li
               - if user_signed_in?
                 = link_to t('.welcome', email: current_user.email), '#'
               - else
-                = link_to t(".login"), "#login", :onclick => "return false;", "data-toggle" => "modal", :id => "login-menu"
-                = render "layouts/login"
+                = link_to t('.login'), '#login', onclick: 'return false;', 'data-toggle' => 'modal', class: 'menu-item'
+                = render 'layouts/login'

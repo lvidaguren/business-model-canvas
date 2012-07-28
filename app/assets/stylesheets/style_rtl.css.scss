@@ -1,4 +1,4 @@
-#language-menu {
+.menu-item {
   font-size: 24px;
 }
 /*
@@ -59,3 +59,30 @@
   text-align: right;
 }
 
+
+/*
+ * ------------Login-----------------
+*/
+#login {
+  color: #000;
+  .control-group {
+    margin-left: 10px;
+    
+    .control-label {
+      width: 85px;
+      float: right;
+      text-align: inherit;
+    }
+    
+    .controls:not(.remember-me) {
+      float: left;
+      margin-left: 0px;
+    }
+  }
+  
+  .login-form {
+    float: right;
+    border-left: 1px solid #EEE;
+  }
+
+}

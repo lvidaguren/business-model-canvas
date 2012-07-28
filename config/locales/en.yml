@@ -7,6 +7,9 @@ en:
       languages: "Languages"
       select_language: "Select language"
       welcome: "Welcome %{email}"
+    
+    login:
+      signin: "Sign in"
       
   boards:
     show:

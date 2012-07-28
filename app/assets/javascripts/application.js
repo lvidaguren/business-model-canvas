@@ -36,7 +36,7 @@ $(document).ready(function() {
 		return false;
 	});
 	
-	$("td").droppable({
+	$("#board td").droppable({
 		drop: function(event, ui) {
 			var card = ui.draggable;
 			var ul = $(this).children("ul");

@@ -28,3 +28,29 @@
 .icon {
   float: right;
 }
+
+
+/*
+ * ------------Login-----------------
+*/
+#login {
+  color: #000;
+  .control-group {
+    margin-right: 10px;
+    
+    .control-label {
+      width: 85px;
+      text-align: inherit;
+    }
+    
+    .controls {
+      margin-left: 90px;
+    }
+  }
+  
+  .login-form {
+    float: left;
+    border-right: 1px solid #EEE;
+  }
+  
+}

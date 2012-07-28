@@ -1,12 +1,31 @@
-#login.modal.hide.fade.in
+#login.modal.hide.fade.in{dir: language_direction}
   .modal-header
     %button.close{"data-dismiss" => "modal", :type => "button"} ×
     %h3= t("layouts.header.login")
     
   .modal-body
-    %table.languages
-      %tr
-        %td
-          = link_to(image_tag('google.png'), user_omniauth_authorize_path(:google_oauth2))
-        %td
-          = link_to(image_tag('facebook.png'), user_omniauth_authorize_path(:facebook))
+    .login-form
+      = form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'form-horizontal'}) do |f|
+        %fieldset
+          .control-group
+            = f.label :email, class: 'control-label'
+            .controls
+              = f.email_field :email
+              
+          .control-group
+            = f.label :password, class: 'control-label'
+            .controls
+              = f.password_field :password
+              
+          .control-group
+            = f.label :remember_me, class: 'control-label'
+            .controls.remember-me
+              = f.check_box :remember_me
+              
+          = f.submit t('.signin'), class: 'btn btn-primary'
+        = render 'devise/shared/links'
+     
+    .login-services
+      = link_to(image_tag('google.png'), user_omniauth_authorize_path(:google_oauth2))
+      = link_to(image_tag('facebook.png'), user_omniauth_authorize_path(:facebook))
+                

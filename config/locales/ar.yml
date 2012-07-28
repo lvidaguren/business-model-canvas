@@ -3,7 +3,12 @@ ar:
     header:
       languages: "اللغات"
       select_language: "اختر لغة"
-       
+      welcome: "%{email} أهلاَ"
+      login: "تسجيل الدخول"
+      
+    login:
+      signin: "تسجيل الدخول"
+      
   boards:
     show:
       key_partners: "الشركاء الرئيسيين"
@@ -33,5 +38,13 @@ ar:
       revenue_streams: "الإيرادات"
       
       add_card: "أضف كارت"
+      
+  activerecord:
+    attributes:
+      user:
+        email: "البريد اﻷلكترونى"
+        password: " كلمة المرور"
+        password_confirmation: "تأكيد كلمة المرور"
+        remember_me: "تذكرنى"
   
   

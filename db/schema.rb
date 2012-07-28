@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120721234300) do
+ActiveRecord::Schema.define(:version => 20120722003048) do
 
   create_table "boards", :force => true do |t|
     t.string   "key"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20120721234300) do
     t.datetime "created_at",                     :null => false
     t.datetime "updated_at",                     :null => false
     t.string   "locale",       :default => "en"
+    t.integer  "user_id"
   end
 
   create_table "cards", :force => true do |t|
