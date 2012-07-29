@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_board
   
   def after_sign_in_path_for(resource)
-    resource.boards << current_board unless current_board.public?
+    resource.boards << current_board if current_board.public?
     super
   end
   
@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
   end
   
   def authenticate_user
-    if current_board && current_board.private? && current_board.user == current_user
+    if current_board && current_board.private? && current_board.user != current_user
       flash[:notice] = t('.private_board')
       redirect_to root_path  
     end
