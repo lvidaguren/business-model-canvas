@@ -15,10 +15,6 @@
 /*
  * ---------------------------container------------------------------
 */
-.content {
-  margin-top: 60px;
-}
-
 a:hover {
   text-decoration: none;
 }
@@ -310,3 +306,9 @@ a:hover {
   width: 700px;
 }
 
+/*
+ * ------------Notice-----------------
+*/
+.login-arrow {
+  background: url('../assets/login_arrow.png') no-repeat;
+}

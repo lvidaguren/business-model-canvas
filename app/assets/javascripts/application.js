@@ -45,7 +45,6 @@ $(document).ready(function() {
 	});
 	
 	deleteCard();
-	
 });
 
 function editableStickyNotes() {
