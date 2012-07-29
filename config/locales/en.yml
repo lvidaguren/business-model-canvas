@@ -12,9 +12,8 @@ en:
       signin: 'Sign in'
       sign_up: 'Sign up'
     
-    application:
-      warning: 'Warning!'
-      your_board_is_public: 'Your board is public and anyone can edit it! Login to make it private'
+  warning:
+    your_board_is_public: 'Your board is public and anyone can edit it! Login to make it private'
       
   boards:
     show:

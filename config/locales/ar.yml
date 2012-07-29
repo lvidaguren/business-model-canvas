@@ -9,10 +9,9 @@ ar:
     login:
       signin: 'تسجيل الدخول'
       sign_up: 'إنشاء حساب'
-      
-    application:
-      warning: 'تحذير!'
-      your_board_is_public: 'لوحتك مفتوحة للجميع ... سجل الدخول لتحعلها خاصة'
+     
+  warning:
+    your_board_is_public: 'لوحتك مفتوحة للجميع ... سجل الدخول لتحعلها خاصة'
       
   boards:
     show:

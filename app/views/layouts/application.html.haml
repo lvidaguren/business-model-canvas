@@ -13,15 +13,6 @@
   %body{dir: language_direction}
     = render 'layouts/header'
     
-    - if current_board.public?
-      .row
-        .span4.offset8
-          #notice.alert.alert-block
-            = link_to '#', 'data-dismiss' => 'alert', class: 'close' do
-              ×
-            %h4.alert-heading= t('.warning')
-            = t('.your_board_is_public')
-      
     .container.content
       .row
         .span12
