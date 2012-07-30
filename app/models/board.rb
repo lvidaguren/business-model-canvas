@@ -1,10 +1,12 @@
 class Board < ActiveRecord::Base
   attr_accessible :designed_by, :designed_for
   has_many :cards
-  belongs_to :user
+  
+  has_many :ownerships
+  has_many :users, through: :ownerships
   
   def public?
-    !self.user
+    self.users.blank?
   end
   
   def private?

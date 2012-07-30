@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
   end
   
   def authenticate_user
-    if current_board && current_board.private? && current_board.user != current_user
+    if current_board && current_board.private? && !current_board.users.include?(current_user)
       session[:board_key] = @previous_board_key
       flash[:error] = t('warning.private_board')
       redirect_to root_path 
@@ -33,7 +33,7 @@ class ApplicationController < ActionController::Base
   end
   
   def board_warning
-    current_board && current_board.public? && controller_name == "boards" ? flash[:warning] = t('.warning.your_board_is_public') : flash.delete(:warning)
+    current_board && current_board.public? && controller_name == 'boards' ? flash[:warning] = t('.warning.your_board_is_public') : flash.delete(:warning)
   end
   
   def board_session_key
