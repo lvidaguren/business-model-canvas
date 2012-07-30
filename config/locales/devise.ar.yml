@@ -150,3 +150,8 @@ ar:
       already_confirmed: "تم التأكيد مسبقا"
       not_found: "غير موجود"
       not_locked: "لم يكن مغلقا"
+      
+  login:
+    signin: 'تسجيل الدخول'
+    sign_up: 'إنشاء حساب'
+     

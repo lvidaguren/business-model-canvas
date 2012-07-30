@@ -1,7 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   
-  before_filter :set_locale, :authenticate_user
+  prepend_before_filter :board_session_key  
+  before_filter :set_locale
   before_filter :board_warning
   
   helper_method :current_board
@@ -25,12 +26,20 @@ class ApplicationController < ActionController::Base
   
   def authenticate_user
     if current_board && current_board.private? && current_board.user != current_user
-      flash[:notice] = t('.private_board')
-      redirect_to root_path  
+      session[:board_key] = @previous_board_key
+      flash[:error] = t('warning.private_board')
+      redirect_to root_path 
     end
   end
   
   def board_warning
-    current_board.public? && controller_name == "boards" ? flash[:warning] = t('.warning.your_board_is_public') : flash.delete(:warning)
+    current_board && current_board.public? && controller_name == "boards" ? flash[:warning] = t('.warning.your_board_is_public') : flash.delete(:warning)
+  end
+  
+  def board_session_key
+    if params[:key]
+      @previous_board_key = session[:board_key] # saving the old board key to use it if the board is restricted
+      session[:board_key] = params[:key]
+    end
   end
 end

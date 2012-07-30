@@ -295,22 +295,19 @@ a:hover {
       cursor: pointer;
     }
   }
+}
+
+/*
+ * ------------Modal-----------------
+*/
+.modal {
+  width: 700px;
+  color: #000;
   
   h3 {
     font-family: 'Rock Salt', "Arial Rounded MT Bold", arial, serif;
     color: #E76436;
   }
-}
-
-.modal {
-  width: 700px;
-}
-
-/*
- * ------------Notice-----------------
-*/
-.login-arrow {
-  background: url('../assets/login_arrow.png') no-repeat;
 }
 
 .clear-floating {

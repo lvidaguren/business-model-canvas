@@ -17,8 +17,8 @@
       .row
         .span12
           - flash.each do |key ,value|
-            %div{:class => "alert fade in  alert-#{key == :notice ? "success" : key}"}
-              %a.close{"data-dismiss" => "alert", :href => "#"} ×
+            %div{class: "alert fade in alert-#{alert_type(key)}"}
+              %a.close{'data-dismiss' => 'alert', href: '#'} ×
               = value
               
           = yield

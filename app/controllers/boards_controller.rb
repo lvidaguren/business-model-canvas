@@ -1,5 +1,6 @@
 class BoardsController < ApplicationController
   after_filter :save_locale
+  before_filter :authenticate_user
   
   def show
     @cards = current_board.cards.group_by(&:section) || []

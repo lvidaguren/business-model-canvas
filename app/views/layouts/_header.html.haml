@@ -11,6 +11,11 @@
         
         .nav-collapse
           %ul.nav.pull-right
+            - if user_signed_in?
+              %li
+                = link_to t('.invite'), '#invite', onclick: 'return false;', 'data-toggle' => 'modal', class: 'menu-item'
+                = render 'invitations/invite'
+              
             %li
               = link_to t('.languages'), '#language', onclick: 'return false;', 'data-toggle' => 'modal', class: 'menu-item'
               = render 'layouts/languages' 
@@ -27,4 +32,4 @@
                 
               - else
                 = link_to t('.login'), '#login', onclick: 'return false;', 'data-toggle' => 'modal', class: 'menu-item', id: 'login-menu-item'
-                = render 'layouts/login'
+                = render 'devise/login'

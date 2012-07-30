@@ -8,12 +8,9 @@ en:
       select_language: 'Select language'
       welcome: 'Welcome %{email}'
     
-    login:
-      signin: 'Sign in'
-      sign_up: 'Sign up'
-    
   warning:
     your_board_is_public: 'Your board is public and anyone can edit it! Login to make it private'
+    private_board: "You're not allowed to access this board"
       
   boards:
     show:
@@ -45,14 +42,19 @@ en:
       
       add_card: 'Add Card'
   
-    activerecord:
-      attributes:
-        user:
-          email: 'Email'
-          password: ' Password'
-          password_confirmation: 'Confirmation password'
-          remember_me: 'Remember me'
-          current_password: 'Current password'
+  invitations:
+    invite:
+      invite: 'Invite'
+      enter_memebers_emails: 'Enter members emails ";" separated'
+      
+  activerecord:
+    attributes:
+      user:
+        email: 'Email'
+        password: ' Password'
+        password_confirmation: 'Confirmation password'
+        remember_me: 'Remember me'
+        current_password: 'Current password'
           
   actions:
     back: 'Back'

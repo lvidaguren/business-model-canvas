@@ -1,0 +1,13 @@
+%p
+  Hello #{@resource.email}!
+  
+%p
+  Someone from #{link_to 'businessmodelcanvas.herokuapp.com', 'http://businessmodelcanvas.herokuapp.com'}
+  has invited you to a canvas, you can accept it through the link below to be able to edit the canvas.
+  
+%p= link_to 'Accept invitation', accept_invitation_url(@resource, :invitation_token => @resource.invitation_token)
+
+%p
+  If you don't want to accept the invitation, please ignore this email.
+  %br/
+  Your account won't be created until you access the link above and set your password.

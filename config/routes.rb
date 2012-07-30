@@ -6,10 +6,13 @@ BuissnessModelCanvas::Application.routes.draw do
     get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
   end
   
+  # Invitations
+  post 'invitations/invite' => 'invitations#invite', as: :invite
+  
   # Board
-  get 'boards/:key' => 'boards#show', :as => :board
+  get 'boards/:key' => 'boards#show', as: :board
   post 'boards/:board_id/update' => 'boards#update'
-  get 'board/:key/section/:handler' => 'boards#section', :as => :section
+  get 'board/:key/section/:handler' => 'boards#section', as: :section
   
   # Cards
   post 'cards/create'

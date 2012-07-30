@@ -3,13 +3,10 @@ ar:
     header:
       languages: 'اللغات'
       select_language: 'اختر لغة'
-      welcome: '%{email} أهلاَ'
+      welcome: 'أهلاَ %{email}'
       login: 'تسجيل الدخول'
+      invite: 'دعوة أعضاء للوحة'
       
-    login:
-      signin: 'تسجيل الدخول'
-      sign_up: 'إنشاء حساب'
-     
   warning:
     your_board_is_public: 'لوحتك مفتوحة للجميع ... سجل الدخول لتحعلها خاصة'
       
@@ -42,6 +39,11 @@ ar:
       revenue_streams: 'الإيرادات'
       
       add_card: 'أضف كارت'
+  
+  invitations:
+    invite:
+      invite: 'أرسل الدعوة'
+      enter_memebers_emails: 'أدخل البريد الﻷكترونى لكل عضو و افصل كل بريد إلكترونى عن الأخر ب ";"'
       
   activerecord:
     attributes:

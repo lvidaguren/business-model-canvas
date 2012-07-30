@@ -1,0 +1,14 @@
+#invite.modal.hide.fade.in
+  .modal-header
+    %button.close{'data-dismiss' => 'modal', type: 'button'} ×
+    %h3= t('layouts.header.invite_members')
+    
+  .modal-body
+    = form_tag invite_path, class: 'horizontal-form' do
+      %fieldset
+        .control-group
+          .controls
+            = text_area_tag :emails, nil, rows: 10, class: 'input-xlarge'
+            %i= t('.enter_memebers_emails')
+            
+        = submit_tag t('.invite'), class: 'btn btn-primary'

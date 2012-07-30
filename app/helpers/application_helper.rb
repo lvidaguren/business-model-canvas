@@ -18,4 +18,15 @@ module ApplicationHelper
   def resource_class
     devise_mapping.to
   end
+  
+  def alert_type(key)
+    case key
+    when :notice
+      'success'
+    when :error
+      'danger'
+    else
+      key
+    end
+  end
 end

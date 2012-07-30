@@ -20,6 +20,16 @@ BuissnessModelCanvas::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+  config.action_mailer.default_url_options = { :host => 'businessmodelcanvas.herokuapp.com' }
+  
+  ActionMailer::Base.smtp_settings = {  
+    address: 'smtp.gmail.com',  
+    port: 587,  
+    domain: 'gmail.com',  
+    user_name: 'canvas.business.model@gmail.com',  
+    password: 'bmcanvas123',  
+    authentication: 'plain'
+  } 
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
 

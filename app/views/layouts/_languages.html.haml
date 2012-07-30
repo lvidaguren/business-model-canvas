@@ -1,11 +1,11 @@
 #language.modal.hide.fade.in
   .modal-header
-    %button.close{"data-dismiss" => "modal", :type => "button"} ×
-    %h3= t("layouts.header.select_language")
+    %button.close{'data-dismiss' => 'modal', type: 'button'} ×
+    %h3= t('layouts.header.languages')
     
   .modal-body
     %table.languages
       %td
         %ul
-          %li= link_to "عربى", url_for(:only_path => false, :locale => :ar)
-          %li= link_to "English", url_for(:only_path => false, :locale => :en)
+          %li= link_to 'عربى', url_for(only_path: false, locale: :ar)
+          %li= link_to 'English', url_for(only_path: false, locale: :en)
