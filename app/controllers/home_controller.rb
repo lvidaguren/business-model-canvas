@@ -7,6 +7,7 @@ class HomeController < ApplicationController
     session[:board_key] = board.key
     
     flash_key = flash.keys.first.try(:to_sym)
-    redirect_to board_path(board.key), flash: {flash_key => flash[flash_key]}
+    flash_message = flash_key ? {flash: {flash_key => flash[flash_key]}} : {}
+    redirect_to board_path(board.key), flash_message
   end
 end
