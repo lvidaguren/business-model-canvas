@@ -9,7 +9,7 @@
       %b= t(".designed_by")
       #designed_by.edit= current_board.designed_by
 
-= hidden_field_tag :board_id, current_board.id, :id => "board_id" 
+= hidden_field_tag :board_key, current_board.key, :id => 'board_key'
 = hidden_field_tag :page, "board", :id => "page"
 
 .board-outline.resizable.ui-widget-content

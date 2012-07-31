@@ -11,7 +11,7 @@ BuissnessModelCanvas::Application.routes.draw do
   
   # Board
   get 'boards/:key' => 'boards#show', as: :board
-  post 'boards/:board_id/update' => 'boards#update'
+  post 'boards/:key/update' => 'boards#update'
   get 'board/:key/section/:handler' => 'boards#section', as: :section
   
   # Cards

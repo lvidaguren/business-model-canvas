@@ -48,9 +48,10 @@ $(document).ready(function() {
 });
 
 function editableStickyNotes() {
-	$(".edit").editable("/boards/" + $("#board_id").val() + "/update");
+	// Just to be REST but actualy we use the current_board method to get the current board
+	$(".edit").editable("/boards/" + $("#board_key").val() + "/update", {onblur : 'submit'});
 	
-	$(".editable-title").editable("/cards/update");
+	$(".editable-title").editable("/cards/update", {onblur : 'submit'});
 	
   $(".editable-content").editable("/cards/update", { 
       type      : 'textarea',
@@ -70,15 +71,14 @@ function addCard(td) {
 	deleteCard();
 	
 	var card = ul.children().last(); 
-	var board_id = $("#board_id").val();
 	var parameters;
 	
 	if(page == "board") {
 		parameters = {card: {content: "", title: "Card Title", section: td.attr("id"), 
-											   board_left: card.position().left, board_top: card.position().top, board_id: board_id}};	
+											   board_left: card.position().left, board_top: card.position().top}};	
 	} else {
 		parameters = {card: {content: "", title: "Card Title", section: td.attr("id"), 
-											   section_left: card.position().left, section_top: card.position().top, board_id: board_id}};	
+											   section_left: card.position().left, section_top: card.position().top}};	
 	}
 																	
 	$.post("/cards/create", parameters, function(data) {

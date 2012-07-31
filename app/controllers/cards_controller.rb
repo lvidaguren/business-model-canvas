@@ -1,6 +1,7 @@
 class CardsController < ApplicationController
   def create
     card = Card.create(params[:card])
+    card.update_attribute(:board, current_board)
     respond_to do |format|
       format.json { render json: card.id }
     end
@@ -9,7 +10,7 @@ class CardsController < ApplicationController
   def destroy
     card = Card.find(params[:id])
     card.destroy
-    render :text => ""
+    render text: ''
   end
 
   def update
@@ -18,10 +19,13 @@ class CardsController < ApplicationController
     
     params[:id] =~ /card_(title|content)_(\d+)/
     if $1
+      # For text editing
       card.update_attribute($1, params[:value])
-      render :text => params[:value]    
+      render text: params[:value]    
     else
+      # For dragging
       card.update_attributes(params[:card])  
+      render text: ''
     end
   end
 end
