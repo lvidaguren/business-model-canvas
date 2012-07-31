@@ -21,7 +21,6 @@ class ApplicationController < ActionController::Base
   end
   
   def current_board
-    p Board.find_by_key(session[:board_key]), 'ssssssssssssssssssssss', session[:board_key]
     @board ||= Board.find_by_key(session[:board_key])
   end
   
@@ -38,7 +37,7 @@ class ApplicationController < ActionController::Base
   end
   
   def board_session_key
-    if params[:key] && !params[:key].blank?
+    if params[:key]
       @previous_board_key = session[:board_key] # saving the old board key to use it if the board is restricted
       session[:board_key] = params[:key]
     end

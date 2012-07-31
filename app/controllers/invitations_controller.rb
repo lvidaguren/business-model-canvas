@@ -7,6 +7,6 @@ class InvitationsController < ApplicationController
       current_board.users << user # Adding the invited user to the current board collaborators
     end
     
-    redirect_to board_path(current_board), notice: t('devise.invitations.send_instructions')
+    redirect_to board_path(current_board.key), notice: t('devise.invitations.send_instructions')
   end
 end
