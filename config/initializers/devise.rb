@@ -18,8 +18,13 @@ Devise.setup do |config|
   require 'omniauth-facebook'
   
   # Google
-  config.omniauth :google_oauth2, '514421020147', 'mvxgjtfJ7DIlhjdWldokMrnR', 
-                  { access_type: 'offline', approval_prompt: '' }
+  if Rails.env == 'production'
+    config.omniauth :google_oauth2, '514421020147', 'mvxgjtfJ7DIlhjdWldokMrnR', 
+                    { access_type: 'offline', approval_prompt: '' }
+  else
+    config.omniauth :google_oauth2, '436721615495', 'U3hNe_OKSnr_wi0kl7C584N_', 
+                    { access_type: 'offline', approval_prompt: '' }
+  end
   
   # Facebook                  
   config.omniauth :facebook, '325376910884981', 'c6da8c812022b5a9c89c5b8b726404b9'

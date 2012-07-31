@@ -21,6 +21,7 @@ class ApplicationController < ActionController::Base
   end
   
   def current_board
+    p Board.find_by_key(session[:board_key]), 'ssssssssssssssssssssss', session[:board_key]
     @board ||= Board.find_by_key(session[:board_key])
   end
   
