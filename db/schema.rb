@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120730223849) do
+ActiveRecord::Schema.define(:version => 20120801002509) do
 
   create_table "boards", :force => true do |t|
     t.string   "key"
@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(:version => 20120730223849) do
     t.integer  "invitation_limit"
     t.integer  "invited_by_id"
     t.string   "invited_by_type"
+    t.string   "invitation_board_key"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

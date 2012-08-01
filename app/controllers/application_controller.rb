@@ -8,7 +8,12 @@ class ApplicationController < ActionController::Base
   helper_method :current_board
   
   def after_sign_in_path_for(resource)
-    resource.boards << current_board if current_board.public?
+    if current_user.invitation_board_key
+      session[:board_key] = current_user.invitation_board_key
+      current_user.update_attribute(:invitation_board_key, nil) # Mark as visited
+    elsif current_board && current_board.public?
+      resource.boards << current_board
+    end
     super
   end
   
@@ -28,7 +33,7 @@ class ApplicationController < ActionController::Base
     if current_board && current_board.private? && !current_board.users.include?(current_user)
       session[:board_key] = @previous_board_key
       flash[:error] = t('warning.private_board')
-      redirect_to root_path 
+      redirect_to new_user_session_path 
     end
   end
   

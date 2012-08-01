@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   
   has_many :ownerships
   has_many :boards, through: :ownerships
-    
+  has_many :invi
   def self.find_for_google_oauth2(access_token, signed_in_resource=nil)
     data = access_token.info
     User.find_by_email(data['email']) || User.create(email: data['email'], password: Devise.friendly_token[0, 20])
