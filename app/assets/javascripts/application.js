@@ -82,11 +82,15 @@ function addCard(td) {
 	}
 																	
 	$.post("/cards/create", parameters, function(data) {
-		var cardColors = '<div class="card-colors">'
-		cardColors += '<a href=\"#\" class=\"color-box purple\" onclick=\"changeCardColor(' + data + ', \'purple\', \'#CCCCFF\'); return false;\"></a>'
-		cardColors += '<a href=\"#\" class=\"color-box green\" onclick=\"changeCardColor(' + data + ', \'green\', \'#CCFFCC\'); return false;\"></a>'
-		cardColors += '<a href=\"#\" class=\"color-box yellow\" onclick=\"changeCardColor(' + data + ', \'yellow\', \'#FFFFCC\'); return false;\"></a>'
-		cardColors += '</div>'
+		var colors = ['purple', 'green', 'yellow', 'red'];
+		var colorsHex = ['#CCCCFF', '#CCFFCC', '#FFFFCC', '#FFCCFF'];
+		var cardColors = '<div class="card-colors">';
+		
+		for(var i = 0; i < colors.length; i++) {
+			cardColors += '<a href=\"#\" class=\"color-box ' + colors[i] + '" onclick=\"changeCardColor(' + data + ', \'' + colors[i] + '\', \'' + colorsHex[i] + '\'); return false;\"></a>'
+		}
+		
+		cardColors += '</div>';
 		
 		card.attr("id", data); //setting the card id
 		card.children("h2").attr("id", "card_title_" + data);
