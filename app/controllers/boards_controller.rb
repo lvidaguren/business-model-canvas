@@ -16,6 +16,15 @@ class BoardsController < ApplicationController
     render :text => params[:value]
   end
   
+  def new
+    board = Board.create
+    board.update_attribute(:key, Base32::Crockford.encode(board.id))
+    current_user.boards << board if user_signed_in?
+    session[:board_key] = board.key
+    
+    redirect_to board_path(board.key), notice: t('boards.new.board_created')
+  end
+  
   protected
   def save_locale
     current_board.update_attribute(:locale, params[:locale]) if params[:locale] && params[:locale] != current_board.locale

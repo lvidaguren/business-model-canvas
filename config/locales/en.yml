@@ -7,7 +7,8 @@ en:
       languages: 'Languages'
       select_language: 'Select language'
       welcome: 'Welcome %{email}'
-    
+      create_board: 'New Board'
+      
   warning:
     your_board_is_public: 'Your board is public and anyone can edit it! Login to make it private'
     private_board: "You're not allowed to access this board!"
@@ -41,7 +42,10 @@ en:
       revenue_streams: 'Revenue Streams'
       
       add_card: 'Add Card'
-  
+    
+    new:
+      board_created: 'A new board is successfully created!'
+      
   invitations:
     invite:
       invite: 'Invite'

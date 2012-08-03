@@ -10,6 +10,7 @@ BuissnessModelCanvas::Application.routes.draw do
   post 'invitations/invite' => 'invitations#invite', as: :invite
   
   # Board
+  get 'boards/new' => 'boards#new', as: :new_board
   get 'boards/:key' => 'boards#show', as: :board
   post 'boards/:key/update' => 'boards#update'
   get 'board/:key/section/:handler' => 'boards#section', as: :section

@@ -6,9 +6,10 @@ ar:
       welcome: 'أهلاَ %{email}'
       login: 'تسجيل الدخول'
       invite: 'دعوة أعضاء للوحة'
+      create_board: 'لوحة جديدة'
       
   warning:
-    your_board_is_public: 'لوحتك مفتوحة للجميع ... سجل الدخول لتحعلها خاصة'
+    your_board_is_public: 'لوحتك مفتوحة للجميع ... سجل الدخول لتجعلها خاصة'
       
   boards:
     show:
@@ -40,6 +41,9 @@ ar:
       
       add_card: 'أضف كارت'
   
+    new:
+      board_created: 'تم إنشاء لوحة جديدة بنجاح!'
+      
   invitations:
     invite:
       invite: 'أرسل الدعوة'
