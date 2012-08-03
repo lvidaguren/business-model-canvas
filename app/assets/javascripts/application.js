@@ -82,12 +82,23 @@ function addCard(td) {
 	}
 																	
 	$.post("/cards/create", parameters, function(data) {
-																				card.attr("id", data); //setting the card id
-																				card.children("h2").attr("id", "card_title_" + data);
-																				card.children("p").attr("id", "card_content_" + data);
-																			});
+		var cardColors = '<div class="card-colors">'
+		cardColors += '<a href=\"#\" class=\"color-box purple\" onclick=\"changeCardColor(' + data + ', \'purple\', \'#CCCCFF\'); return false;\"></a>'
+		cardColors += '<a href=\"#\" class=\"color-box green\" onclick=\"changeCardColor(' + data + ', \'green\', \'#CCFFCC\'); return false;\"></a>'
+		cardColors += '<a href=\"#\" class=\"color-box yellow\" onclick=\"changeCardColor(' + data + ', \'yellow\', \'#FFFFCC\'); return false;\"></a>'
+		cardColors += '</div>'
+		
+		card.attr("id", data); //setting the card id
+		card.children("h2").attr("id", "card_title_" + data);
+		card.children("p").attr("id", "card_content_" + data);
+		card.append(cardColors);
+	});
+																			
+																			
 }
 
+
+																				
 
 function moveCard(card, cardParent, droppable_area, newLeft, newTop) {
 	var page = $("#page").val();
@@ -121,4 +132,9 @@ function deleteCard() {
 	    }
 		});
 	});
+}
+
+function changeCardColor(cardID, colorName, colorRGB) {
+	$.post('/cards/update', {id: cardID, card: {color: colorName}});
+	$('#' + cardID).css({backgroundColor: colorRGB})
 }

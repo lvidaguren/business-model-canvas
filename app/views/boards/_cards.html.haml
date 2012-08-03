@@ -1,5 +1,10 @@
-%li{:id => card.id, :style => "position: absolute; left: #{card.send(left)}px; top: #{card.send(top)}px"}
+%li{id: card.id, style: "position: absolute; left: #{card.send(left)}px; top: #{card.send(top)}px;", class: "#{card.color}"}
   .delete
   .clearance
-  %h2.editable-title{:id => "card_title_#{card.id}"}= defined?(truncate) ? card.title.truncate(15) : card.title
-  %p.editable-content{:id => "card_content_#{card.id}"}= defined?(truncate) ? card.content.truncate(20) : card.content 
+  
+  %h2.editable-title{id: "card_title_#{card.id}"}= defined?(truncate) ? card.title.truncate(15) : card.title
+  %p.editable-content{id: "card_content_#{card.id}"}= defined?(truncate) ? card.content.truncate(20) : card.content 
+  
+  .card-colors
+    - Card::COLORS.each do |color|
+      = link_to '', '#', class: "color-box #{color}", onclick: "changeCardColor(#{card.id}, '#{color}', $(this).css('backgroundColor')); return false;"
