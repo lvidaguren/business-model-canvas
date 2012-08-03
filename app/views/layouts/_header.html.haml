@@ -15,11 +15,16 @@
               %li
                 = link_to t('.invite'), '#invite', onclick: 'return false;', 'data-toggle' => 'modal', class: 'menu-item'
                 = render 'invitations/invite'
-              
-            %li
-              = link_to t('.languages'), '#language', onclick: 'return false;', 'data-toggle' => 'modal', class: 'menu-item'
-              = render 'layouts/languages' 
             
+            %li.dropdown
+              = link_to '#', class: 'dropdown-toggle menu-item', 'data-toggle' => 'dropdown' do
+                = t('.languages')
+                %span.caret
+                    
+                %ul.dropdown-menu
+                  %li= link_to 'عربى', url_for(only_path: false, locale: :ar)
+                  %li= link_to 'English', url_for(only_path: false, locale: :en)
+                    
             %li.dropdown
               - if user_signed_in?
                 = link_to '#', class: 'dropdown-toggle', 'data-toggle' => 'dropdown' do
