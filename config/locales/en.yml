@@ -2,6 +2,10 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  recaptcha:
+    errors:
+      incorrect-captcha-sol: 'Error in ReCAPTCHA!'
+      
   layouts:
     header:
       languages: 'Languages'
@@ -67,3 +71,4 @@ en:
     back: 'Back'
     are_you_sure: 'Are you sure?'
     
+

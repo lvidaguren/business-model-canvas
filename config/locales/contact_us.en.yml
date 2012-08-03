@@ -16,6 +16,7 @@ en:
         message: 'Message'
         name: 'Name'
         subject: 'Subject'
+        captcha: 'CAPTCHA'
         submit: 'Submit'
         send_us_email: 'You can message us on'
         fill_in_the_form: 'or you can fill in the following fields:'
@@ -26,5 +27,5 @@ en:
         <<: *new
     
     notices:
-      error: 'You must enter both fields.'
+      error: 'You must fill in the required fields!'
       success: 'Contact email was successfully sent.'

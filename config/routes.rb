@@ -22,6 +22,9 @@ BuissnessModelCanvas::Application.routes.draw do
 
   root :to => 'home#index'
 
+  resources :contacts, only: [:new, :create]
+  match 'contact-us' => 'contacts#new', as: :contact_us
+  
   post 'home/save'
   get 'home/load'
   # The priority is based upon order of creation:

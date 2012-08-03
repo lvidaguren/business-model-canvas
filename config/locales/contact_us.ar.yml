@@ -13,6 +13,7 @@ ar:
         message: 'الرسالة'
         name: 'اﻷسم'
         subject: 'العنوان'
+        captcha: 'الكابتشا'
         submit: 'أرسل'
         send_us_email: 'يمكنك الأتصال بنا عبر البريد اﻷلكترونى'
         fill_in_the_form: ' أو عن طريق ملىء الحقول اﻷتية:'
