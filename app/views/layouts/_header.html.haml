@@ -26,8 +26,8 @@
                 %span.caret
                     
               %ul.dropdown-menu
-                %li= link_to 'عربى', url_for(only_path: false, locale: :ar)
-                %li= link_to 'English', url_for(only_path: false, locale: :en)
+                %li= link_to 'عربى', request.method != 'GET' ? :back : url_for(only_path: false, locale: :ar)
+                %li= link_to 'English', request.method != 'GET' ? :back : url_for(only_path: false, locale: :en)
                     
             %li.dropdown
               - if user_signed_in?

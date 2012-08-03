@@ -8,6 +8,9 @@ ar:
       invite: 'دعوة أعضاء للوحة'
       create_board: 'لوحة جديدة'
       
+    footer:
+      contact_us: 'اتصل بنا'
+      
   warning:
     your_board_is_public: 'لوحتك مفتوحة للجميع ... سجل الدخول لتجعلها خاصة'
       

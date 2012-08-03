@@ -9,6 +9,9 @@ en:
       welcome: 'Welcome %{email}'
       create_board: 'New Board'
       
+    footer:
+      contact_us: 'Contact Us'
+      
   warning:
     your_board_is_public: 'Your board is public and anyone can edit it! Login to make it private'
     private_board: "You're not allowed to access this board!"

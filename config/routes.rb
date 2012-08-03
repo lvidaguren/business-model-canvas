@@ -21,7 +21,7 @@ BuissnessModelCanvas::Application.routes.draw do
   post 'cards/update' => 'cards#update'
 
   root :to => 'home#index'
-  
+
   post 'home/save'
   get 'home/load'
   # The priority is based upon order of creation:

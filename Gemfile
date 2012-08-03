@@ -11,6 +11,7 @@ gem 'devise'
 gem 'devise_invitable'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
+gem 'contact_us', '~> 0.4.0.beta'
 
 # Gems used only for assets and not required
 # in production environments by default.
