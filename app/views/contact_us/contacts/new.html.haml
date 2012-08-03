@@ -1,0 +1,26 @@
+%h2= t('.contact_us')
+
+.well
+  = t('.send_us_email') 
+  = mail_to('canvas.business.model@gmail.com')
+  = t('.fill_in_the_form')
+
+= form_for @contact, :url => contacts_path, :html => { :class => 'form-horizontal' } do |f|
+  %fieldset
+    %div{:class => "control-group #{'error' if @contact.errors.keys.include?(:email)}"}
+      = f.label :email, t('.email'), :class => 'control-label'
+      .controls
+        = f.email_field :email, :class => 'text_field'
+    
+    %div{:class => "control-group #{'error' if @contact.errors.keys.include?(:subject)}"}
+      = f.label :subject, t('.subject'), :class => 'control-label'
+      .controls
+        = f.text_field :subject, :class => 'text_field'
+    
+    %div{:class => "control-group #{'error' if @contact.errors.keys.include?(:message)}"}
+      = f.label :message, t('.message'), :class => 'control-label'
+      .controls
+        = f.text_area :message, :rows => 5, :class => "message-text-area"
+    
+    .form-actions
+      = f.submit t('.submit'), :class => 'btn btn-primary'

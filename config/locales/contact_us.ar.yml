@@ -1,0 +1,28 @@
+ar:
+  contact_us:
+    contact_mailer:
+      contact_email:
+        sent_by_contact_form: 'مرسلة من %{email}'
+        sent_by_name: 'مرسلة من %{name} عن طريق البريد اﻷلكترونى %{email}'
+        subject: 'مرسلة من %{email}'
+    
+    contacts:
+      new: &new
+        contact_us: 'اتصل بنا'
+        email: 'البريد اﻷلكترونى'
+        message: 'الرسالة'
+        name: 'اﻷسم'
+        subject: 'العنوان'
+        submit: 'أرسل'
+        send_us_email: 'يمكنك الأتصال بنا عبر البريد اﻷلكترونى'
+        fill_in_the_form: ' أو عن طريق ملىء الحقول اﻷتية:'
+        
+      new_formtastic:
+        <<: *new
+      new_simple_form:
+        <<: *new
+    
+    notices:
+      error: 'يجب إدخال الحقول المطلوبة لتتمكن من إرسال الرسالة'
+      success: 'تم إرسال الرسالة بنجاح ... شكرا على اتصالك بنا'
+     
