@@ -1,6 +1,6 @@
 %ul.comments-list
   - @comments.each do |comment|
-    %li
+    %li{id: "comment_#{comment.id}"}
       %b= "#{comment.user.email}: "
       = comment.body
 

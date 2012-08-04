@@ -6,10 +6,10 @@ class CommentsController < ApplicationController
   
   def create
     @card = current_board.cards.find(params[:comment][:commentable_id])
-    comment = Comment.new(params[:comment])
-    comment.commentable = @card
-    comment.user = current_user
-    comment.save!
+    @comment = Comment.new(params[:comment])
+    @comment.commentable = @card
+    @comment.user = current_user
+    @comment.save!
     
     @comments = @card.comment_threads
   end

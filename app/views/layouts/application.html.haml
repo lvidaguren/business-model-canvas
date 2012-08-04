@@ -2,13 +2,14 @@
 %html
   %head
     %title Business Model Canvas
-    = stylesheet_link_tag    "application", "style_#{language_direction}", :media => "all"
-    = javascript_include_tag "application", "jquery.jeditable.mini", "jquery.ui.core", "jquery.ui.widget"
-    = javascript_include_tag "jquery.ui.mouse", "jquery.ui.resizable", "jquery.ui.draggable", "jquery.ui.droppable"
+    = stylesheet_link_tag    'application', "style_#{language_direction}", :media => 'all'
+    = javascript_include_tag 'application', 'jquery.jeditable.mini', 'jquery.ui.core', 'jquery.ui.widget'
+    = javascript_include_tag 'jquery.ui.mouse', 'jquery.ui.resizable', 'jquery.ui.draggable', 'jquery.ui.droppable'
+    = javascript_include_tag 'jquery.effects.core', 'jquery.effects.highlight'
   
     = csrf_meta_tags
-    %link{:href => "http://fonts.googleapis.com/css?family=Reenie+Beanie:regular", :rel => "stylesheet", :type => "text/css"}
-    %link{:href => "http://fonts.googleapis.com/css?family=Rock+Salt", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => 'http://fonts.googleapis.com/css?family=Reenie+Beanie:regular', :rel => 'stylesheet', :type => 'text/css'}
+    %link{:href => 'http://fonts.googleapis.com/css?family=Rock+Salt', :rel => 'stylesheet', :type => 'text/css'}
     
   %body{dir: language_direction}
     = render 'layouts/header'

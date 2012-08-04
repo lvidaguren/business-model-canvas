@@ -97,14 +97,11 @@ function addCard(td) {
 		card.children("h2").attr("id", "card_title_" + data);
 		card.children("p").attr("id", "card_content_" + data);
 		card.append(cardColors);
-		card.append(cardComments)
+		card.append(cardComments);
 	});
 																			
 																			
 }
-
-
-																				
 
 function moveCard(card, cardParent, droppable_area, newLeft, newTop) {
 	var page = $("#page").val();

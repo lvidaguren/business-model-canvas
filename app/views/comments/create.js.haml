@@ -1,1 +1,2 @@
 $('#comments .modal-body').html("#{escape_javascript(render('comments/comments_form'))}");
+$("#comment_#{@comment.id}").effect('highlight', {}, 3000);
