@@ -49,11 +49,11 @@ $(document).ready(function() {
 
 function editableStickyNotes() {
 	// Just to be REST but actualy we use the current_board method to get the current board
-	$(".edit").editable("/boards/" + $("#board_key").val() + "/update", {onblur : 'submit'});
+	$('.edit').editable('/boards/' + $('#board_key').val() + '/update', {method: 'PUT', onblur : 'submit'});
 	
-	$(".editable-title").editable("/cards/update", {onblur : 'submit'});
+	$('.editable-title').editable('/cards/update', {onblur : 'submit'});
 	
-  $(".editable-content").editable("/cards/update", { 
+  $('.editable-content').editable('/cards/update', { 
       type      : 'textarea',
       onblur    : 'submit',
       tooltip   : 'Click to edit...'
@@ -107,22 +107,26 @@ function addCard(td) {
 }
 
 function moveCard(card, cardParent, droppable_area, newLeft, newTop) {
-	var page = $("#page").val();
+	var page = $('#page').val();
 	
 	var parameters;
 	
-	if(page == "board") {
-		parameters = {id: card.attr("id"), card: {section: cardParent.parent().attr("id"), board_left: newLeft, board_top: newTop}};	
+	if(page == 'board') {
+		parameters = {card: {section: cardParent.parent().attr('id'), board_left: newLeft, board_top: newTop}};	
 	} else {
-		parameters = {id: card.attr("id"), card: {section: cardParent.parent().attr("id"), section_left: newLeft, section_top: newTop}};	
+		parameters = {card: {section: cardParent.parent().attr('id'), section_left: newLeft, section_top: newTop}};	
 	}
 	
-	$.post("/cards/update", parameters);
-																
-	if($(card).parent() != droppable_area.children("ul")){
+	$.ajax({
+	  url: '/cards/' + card.attr('id'),
+	  data: parameters,
+	  type: 'PUT'
+	});
+		
+	if($(card).parent() != droppable_area.children('ul')){
 		cardParent.append(card);
-		cardParent.children().draggable({containment: "#board"});
-		$(card).parent().children("#" + card.id).remove();
+		cardParent.children().draggable({containment: '#board'});
+		$(card).parent().children('#' + card.id).remove();
 		editableStickyNotes();
 	}
 }
@@ -131,8 +135,8 @@ function deleteCard() {
 	$(".delete").click(function() {
 		var li = $(this).parent();
 		$.ajax({
-	    url: "/cards/" + li.attr("id"),
-	    type: "DELETE",
+	    url: '/cards/' + li.attr('id'),
+	    type: 'DELETE',
 	    success: function(result) {
 	    	li.remove();
 	    }
@@ -141,7 +145,12 @@ function deleteCard() {
 }
 
 function changeCardColor(cardID, colorName, colorRGB) {
-	$.post('/cards/update', {id: cardID, card: {color: colorName}});
+	$.ajax({
+	  url: '/cards/' + cardID,
+	  data: {card: {color: colorName}},
+	  type: 'PUT'
+	});
+	
 	$('#' + cardID).css({backgroundColor: colorRGB})
 }
 
