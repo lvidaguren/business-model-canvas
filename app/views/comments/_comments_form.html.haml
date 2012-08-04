@@ -6,7 +6,7 @@
 
 %hr
 
-= form_for comment = Comment.build_from(@card, current_user.try(:id), ''), url: card_comments_path(@card), remote: true, html: {class: 'form-horizontal'} do |f|
+= form_for comment = Comment.build_from(@card, current_user.try(:id), ''), url: comments_path(@card), remote: true, html: {class: 'form-horizontal'} do |f|
   = render 'layouts/errors', object: comment
   
   %fieldset
