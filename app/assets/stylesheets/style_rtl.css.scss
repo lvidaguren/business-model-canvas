@@ -4,18 +4,25 @@
 /*
  * ----------------------Cards---------------------
 */
-#board ul li .delete {
-  float: left;
-  margin-left: -20px;
+#board {
+  ul li .delete {
+    float: left;
+    margin-left: -20px;
+  }
+  
+  .color-box {
+    width: 10px;
+    height: 10px;
+    float: right;
+    margin-left: 2px;
+    border: 1px solid #EEE;
+  }
+
+  .comments {
+    float: left;
+  }
 }
 
-.color-box {
-  width: 10px;
-  height: 10px;
-  float: right;
-  margin-left: 2px;
-  border: 1px solid #EEE;
-}
 
 /*
  * ----------------------Board---------------------

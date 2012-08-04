@@ -22,3 +22,5 @@
                 %ul
                   = render :partial => "cards", :collection => @cards, :as => :card,
                            :locals => {:left => "section_left", :top => "section_top"}
+
+= render 'cards/comments' 

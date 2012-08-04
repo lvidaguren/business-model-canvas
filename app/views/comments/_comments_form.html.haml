@@ -1,0 +1,21 @@
+%ul.comments-list
+  - @comments.each do |comment|
+    %li
+      %b= "#{comment.user.email}: "
+      = comment.body
+
+%hr
+
+= form_for comment = Comment.build_from(@card, current_user.try(:id), ''), url: card_comments_path(@card), remote: true, html: {class: 'form-horizontal'} do |f|
+  = render 'layouts/errors', object: comment
+  
+  %fieldset
+    .control-group
+      = f.label :body, class: 'control-label'
+      .controls
+        = f.text_area :body, rows: 5, class: 'input-xlarge'
+    
+    = f.hidden_field :commentable_id, value: @card.id        
+    
+    .form-actions
+      = f.submit t('.comment'), class: 'btn btn-primary'

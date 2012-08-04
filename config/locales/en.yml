@@ -58,6 +58,10 @@ en:
       invite: 'Invite'
       enter_memebers_emails: 'Enter members emails ";" separated'
       
+  comments:
+    comments_form:
+      comment: 'Comment'
+  
   activerecord:
     attributes:
       user:
@@ -67,6 +71,9 @@ en:
         remember_me: 'Remember me'
         current_password: 'Current password'
           
+      comment:
+        body: 'Comment'
+        
   actions:
     back: 'Back'
     are_you_sure: 'Are you sure?'

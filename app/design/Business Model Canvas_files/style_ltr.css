@@ -1,0 +1,84 @@
+/*
+ * ----------------------Cards---------------------
+*/
+/* line 4, ../../app/assets/stylesheets/style_ltr.css.scss */
+#board ul li .delete {
+  float: right;
+  margin-right: -20px;
+}
+
+/* line 9, ../../app/assets/stylesheets/style_ltr.css.scss */
+.color-box {
+  width: 10px;
+  height: 10px;
+  float: left;
+  margin-right: 2px;
+  border: 1px solid #EEE;
+}
+
+/*
+ * ----------------------Board---------------------
+*/
+/* line 21, ../../app/assets/stylesheets/style_ltr.css.scss */
+#board h2 {
+  text-align: left;
+}
+/* line 25, ../../app/assets/stylesheets/style_ltr.css.scss */
+#board h2 a {
+  font-size: 13px;
+}
+/* line 29, ../../app/assets/stylesheets/style_ltr.css.scss */
+#board .add_card {
+  font-family: 'Rock Salt', "Arial Rounded MT Bold", arial, serif;
+  font-size: 10px;
+}
+
+/* line 35, ../../app/assets/stylesheets/style_ltr.css.scss */
+.icon {
+  float: right;
+}
+
+/*
+ * ------------Login-----------------
+*/
+/* line 44, ../../app/assets/stylesheets/style_ltr.css.scss */
+#login .control-group {
+  margin-right: 10px;
+}
+/* line 47, ../../app/assets/stylesheets/style_ltr.css.scss */
+#login .control-group .control-label {
+  width: 85px;
+  text-align: inherit;
+}
+/* line 52, ../../app/assets/stylesheets/style_ltr.css.scss */
+#login .control-group .controls {
+  margin-left: 90px;
+}
+/* line 57, ../../app/assets/stylesheets/style_ltr.css.scss */
+#login .login-form {
+  float: left;
+  margin-right: 7px;
+  border-right: 1px solid #EEE;
+}
+
+/*
+ * ------------CAPTCHA-----------------
+*/
+/* line 67, ../../app/assets/stylesheets/style_ltr.css.scss */
+.captcha {
+  margin-left: 160px;
+}
+
+/*
+ * ------------Footer-----------------
+*/
+/* line 74, ../../app/assets/stylesheets/style_ltr.css.scss */
+.footer {
+  margin-top: 45px;
+  padding: 35px 0 36px;
+  border-top: 1px solid #E5E5E5;
+}
+/* line 79, ../../app/assets/stylesheets/style_ltr.css.scss */
+.footer p.links {
+  float: right;
+}

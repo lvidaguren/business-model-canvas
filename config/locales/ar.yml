@@ -51,7 +51,11 @@ ar:
     invite:
       invite: 'أرسل الدعوة'
       enter_memebers_emails: 'أدخل البريد الﻷكترونى لكل عضو و افصل كل بريد إلكترونى عن الأخر ب ";"'
-      
+    
+  comments:
+    comments_form:
+      comment: 'أضف تعليق'
+  
   activerecord:
     attributes:
       user:
@@ -60,6 +64,9 @@ ar:
         password_confirmation: 'تأكيد كلمة المرور'
         remember_me: 'تذكرنى'
         current_password: 'كلمة السر الحالية'
+      
+      comment:
+        body: 'التعليق'
         
   actions:
     back: 'رجوع'

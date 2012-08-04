@@ -7,4 +7,10 @@
   
   .card-colors
     - Card::COLORS.each do |color|
-      = link_to '', '#', class: "color-box #{color}", onclick: "changeCardColor(#{card.id}, '#{color}', $(this).css('backgroundColor')); return false;"
+      = link_to '', '#', class: "color-box #{color}", 
+                onclick: "changeCardColor(#{card.id}, '#{color}', $(this).css('backgroundColor')); return false;"
+  
+  
+  - if user_signed_in?
+    = link_to '#', onclick: "loadCardComments(#{card.id}); return false;" do
+      %i.icon-comment.comments

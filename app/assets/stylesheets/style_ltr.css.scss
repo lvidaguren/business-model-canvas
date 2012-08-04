@@ -1,17 +1,23 @@
 /*
  * ----------------------Cards---------------------
 */
-#board ul li .delete {
-  float: right;
-  margin-right: -20px;
-}
+#board{
+  ul li .delete {
+    float: right;
+    margin-right: -20px;
+  }
+  
+  .color-box {
+    width: 10px;
+    height: 10px;
+    float: left;
+    margin-right: 2px;
+    border: 1px solid #EEE;
+  }
 
-.color-box {
-  width: 10px;
-  height: 10px;
-  float: left;
-  margin-right: 2px;
-  border: 1px solid #EEE;
+  .comments {
+    float: right;
+  }
 }
 
 /*

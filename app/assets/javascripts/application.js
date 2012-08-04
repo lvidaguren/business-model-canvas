@@ -81,7 +81,7 @@ function addCard(td) {
 											   section_left: card.position().left, section_top: card.position().top}};	
 	}
 																	
-	$.post("/cards/create", parameters, function(data) {
+	$.post("/cards", parameters, function(data) {
 		var colors = ['purple', 'green', 'yellow', 'red'];
 		var colorsHex = ['#CCCCFF', '#CCFFCC', '#FFFFCC', '#FFCCFF'];
 		var cardColors = '<div class="card-colors">';
@@ -92,10 +92,12 @@ function addCard(td) {
 		
 		cardColors += '</div>';
 		
+		var cardComments = '<a href=\"#\" onclick=\"loadCardComments(' + data + '); return false;\"><i class=\"icon-comment comments\"></i></a>'
 		card.attr("id", data); //setting the card id
 		card.children("h2").attr("id", "card_title_" + data);
 		card.children("p").attr("id", "card_content_" + data);
 		card.append(cardColors);
+		card.append(cardComments)
 	});
 																			
 																			
@@ -141,4 +143,8 @@ function deleteCard() {
 function changeCardColor(cardID, colorName, colorRGB) {
 	$.post('/cards/update', {id: cardID, card: {color: colorName}});
 	$('#' + cardID).css({backgroundColor: colorRGB})
+}
+
+function loadCardComments(cardID) {
+	$.get('/cards/' + cardID + '/comments');
 }

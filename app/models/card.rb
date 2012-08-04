@@ -5,4 +5,6 @@ class Card < ActiveRecord::Base
   validates_inclusion_of :color, in: %w(purple green yellow red)
   
   COLORS = ['purple', 'green', 'yellow', 'red']
+  
+  acts_as_commentable
 end

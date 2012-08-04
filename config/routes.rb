@@ -16,10 +16,12 @@ BuissnessModelCanvas::Application.routes.draw do
   get 'board/:key/section/:handler' => 'boards#section', as: :section
   
   # Cards
-  post 'cards/create'
+  post 'cards(.format)' => 'cards#create'
+  get 'cards/:id/comments' => 'comments#index'
   delete 'cards/:id' => 'cards#destroy'
   post 'cards/update' => 'cards#update'
-
+  post 'cards/:id/comments' => 'comments#create', as: :card_comments
+  
   root :to => 'home#index'
 
   resources :contacts, only: [:new, :create]
