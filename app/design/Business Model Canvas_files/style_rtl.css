@@ -1,0 +1,129 @@
+/* line 1, ../../app/assets/stylesheets/style_rtl.css.scss */
+.menu-item {
+  font-size: 18px;
+}
+
+/*
+ * ----------------------Cards---------------------
+*/
+/* line 7, ../../app/assets/stylesheets/style_rtl.css.scss */
+#board ul li .delete {
+  float: left;
+  margin-left: -20px;
+}
+
+/* line 12, ../../app/assets/stylesheets/style_rtl.css.scss */
+.color-box {
+  width: 10px;
+  height: 10px;
+  float: right;
+  margin-left: 2px;
+  border: 1px solid #EEE;
+}
+
+/*
+ * ----------------------Board---------------------
+*/
+/* line 23, ../../app/assets/stylesheets/style_rtl.css.scss */
+#board {
+  direction: ltr;
+}
+/* line 25, ../../app/assets/stylesheets/style_rtl.css.scss */
+#board h2 {
+  text-align: right;
+}
+/* line 29, ../../app/assets/stylesheets/style_rtl.css.scss */
+#board h2 a {
+  font-size: 24px;
+  padding-right: 10px;
+}
+/* line 34, ../../app/assets/stylesheets/style_rtl.css.scss */
+#board .add_card {
+  font-size: 20px;
+}
+
+/* line 39, ../../app/assets/stylesheets/style_rtl.css.scss */
+.icon {
+  float: left;
+}
+
+/*
+ * ------------Sections-----------------
+*/
+/* line 46, ../../app/assets/stylesheets/style_rtl.css.scss */
+.section-title {
+  font-size: 32px;
+  padding-left: 15px;
+}
+
+/*
+ * ------------Languages Modal-----------------
+*/
+/* line 55, ../../app/assets/stylesheets/style_rtl.css.scss */
+.modal-header .close {
+  float: left;
+}
+
+/* line 59, ../../app/assets/stylesheets/style_rtl.css.scss */
+#language h3 {
+  text-align: right;
+  font-size: 200%;
+}
+
+/*
+ * ------------Desgined by and designed for-----------------
+*/
+/* line 67, ../../app/assets/stylesheets/style_rtl.css.scss */
+.well {
+  text-align: right;
+}
+
+/*
+ * ------------Login-----------------
+*/
+/* line 76, ../../app/assets/stylesheets/style_rtl.css.scss */
+#login .login-form {
+  float: right;
+  border-left: 1px solid #EEE;
+  margin-left: 7px;
+}
+/* line 82, ../../app/assets/stylesheets/style_rtl.css.scss */
+#login .controls:not(.remember-me) {
+  float: left;
+  margin-left: 0px;
+}
+
+/* line 88, ../../app/assets/stylesheets/style_rtl.css.scss */
+.control-group {
+  margin-left: 10px;
+}
+/* line 91, ../../app/assets/stylesheets/style_rtl.css.scss */
+.control-group .control-label {
+  width: 85px;
+  float: right;
+  text-align: inherit;
+}
+
+/*
+ * ------------Footer-----------------
+*/
+/* line 101, ../../app/assets/stylesheets/style_rtl.css.scss */
+.footer {
+  margin-top: 45px;
+  padding: 35px 0 36px;
+  border-top: 1px solid #E5E5E5;
+}
+/* line 106, ../../app/assets/stylesheets/style_rtl.css.scss */
+.footer p.links {
+  float: left;
+}
+
+/*
+ * ------------CAPTCHA-----------------
+*/
+/* line 114, ../../app/assets/stylesheets/style_rtl.css.scss */
+.captcha {
+  direction: ltr;
+  float: right;
+  margin-right: 80px;
+}
