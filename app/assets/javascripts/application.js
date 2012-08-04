@@ -82,20 +82,23 @@ function addCard(td) {
 	}
 																	
 	$.post("/cards", parameters, function(data) {
+		// The data fields are the card id:integer and commentable: boolean
 		var colors = ['purple', 'green', 'yellow', 'red'];
 		var colorsHex = ['#CCCCFF', '#CCFFCC', '#FFFFCC', '#FFCCFF'];
 		var cardColors = '<div class="card-colors">';
 		
-		for(var i = 0; i < colors.length; i++) {
-			cardColors += '<a href=\"#\" class=\"color-box ' + colors[i] + '" onclick=\"changeCardColor(' + data + ', \'' + colors[i] + '\', \'' + colorsHex[i] + '\'); return false;\"></a>'
-		}
+		for(var i = 0; i < colors.length; i++)
+			cardColors += '<a href=\"#\" class=\"color-box ' + colors[i] + '" onclick=\"changeCardColor(' + data['id'] + ', \'' + colors[i] + '\', \'' + colorsHex[i] + '\'); return false;\"></a>'
 		
 		cardColors += '</div>';
+		var cardComments = '';
 		
-		var cardComments = '<a href=\"#\" onclick=\"loadCardComments(' + data + '); return false;\"><i class=\"icon-comment comments\"></i></a>'
-		card.attr("id", data); //setting the card id
-		card.children("h2").attr("id", "card_title_" + data);
-		card.children("p").attr("id", "card_content_" + data);
+		if(data['commentable'])
+			cardComments = '<a href=\"#\" onclick=\"loadCardComments(' + data['id'] + '); return false;\"><i class=\"icon-comment comments\"></i></a>'
+		
+		card.attr("id", data['id']); //setting the card id
+		card.children("h2").attr("id", "card_title_" + data['id']);
+		card.children("p").attr("id", "card_content_" + data['id']);
 		card.append(cardColors);
 		card.append(cardComments);
 	});

@@ -3,7 +3,7 @@ class CardsController < ApplicationController
     card = Card.create(params[:card])
     card.update_attribute(:board, current_board)
     respond_to do |format|
-      format.json { render json: card.id }
+      format.json { render json: {id: card.id, commentable: user_signed_in?} }
     end
   end
 
