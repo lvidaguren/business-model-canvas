@@ -12,4 +12,8 @@ class Board < ActiveRecord::Base
   def private?
     !self.public?
   end
+  
+  def to_param
+    self.key
+  end
 end

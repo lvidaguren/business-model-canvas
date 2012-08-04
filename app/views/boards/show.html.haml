@@ -22,7 +22,7 @@
             %tr
               %td#key_partners.col.first{:rowspan => 3, :style => "", :width => "10%"}
                 %h2.editable{:style => ""} 
-                  %span= link_to t(".key_partners"), section_path(current_board.key, :key_partners)
+                  %span= link_to t(".key_partners"), section_board_path(current_board.key, :key_partners)
                   %span.icon= image_tag "key_partners.png"
                   
                 %span
@@ -34,7 +34,7 @@
                 
               %td#key_activities.col{:style => "", :width => "10%"}
                 %h2.editable{:style => ""} 
-                  %span= link_to t(".key_activities"), section_path(current_board.key, :key_activities)
+                  %span= link_to t(".key_activities"), section_board_path(current_board.key, :key_activities)
                   %span.icon= image_tag "key_activities.png"
                   
                 %span
@@ -46,7 +46,7 @@
               
               %td#value_propositions.col{:rowspan => 3, :style => "", :width => "10%"}
                 %h2.editable{:style => ""} 
-                  %span= link_to t(".value_propositions"), section_path(current_board.key, :value_propositions)
+                  %span= link_to t(".value_propositions"), section_board_path(current_board.key, :value_propositions)
                   %span.icon= image_tag "value_propositions.png"
                   
                 %span
@@ -58,7 +58,7 @@
                   
               %td#customer_relationships.col{:style => "", :width => "10%"}
                 %h2.editable{:style => ""} 
-                  %span= link_to t(".customer_relationships"), section_path(current_board.key, :customer_relationships)
+                  %span= link_to t(".customer_relationships"), section_board_path(current_board.key, :customer_relationships)
                   %span.icon= image_tag "customer_relationships.png"
                   
                 %span
@@ -70,7 +70,7 @@
 
               %td#customer_segments.col{:rowspan => 3, :style => "", :width => "10%"}
                 %h2.editable{:style => ""} 
-                  %span= link_to t(".customer_segments"), section_path(current_board.key, :customer_segments)
+                  %span= link_to t(".customer_segments"), section_board_path(current_board.key, :customer_segments)
                   %span.icon= image_tag "customer_segments.png"
                   
                 %span
@@ -87,7 +87,7 @@
             %tr
               %td#key_resources.col{:style => "", :width => "10%"}
                 %h2.editable{:style => ""} 
-                  %span= link_to t(".key_resources"), section_path(current_board.key, :key_resources)
+                  %span= link_to t(".key_resources"), section_board_path(current_board.key, :key_resources)
                   %span.icon= image_tag "key_resources.png"
                   
                 %span
@@ -99,7 +99,7 @@
                   
               %td#channels.col{:style => "", :width => "10%"}
                 %h2.editable{:style => ""} 
-                  %span= link_to t(".channels"), section_path(current_board.key, :channels)
+                  %span= link_to t(".channels"), section_board_path(current_board.key, :channels)
                   %span.icon= image_tag "channels.png"
                   
                 %span
@@ -119,7 +119,7 @@
                     %tr
                       %td#cost_structure.first.col{:style => "", :width => "10%"}
                         %h2.editable{:style => ""} 
-                          %span= link_to t(".cost_structure"), section_path(current_board.key, :cost_structure)
+                          %span= link_to t(".cost_structure"), section_board_path(current_board.key, :cost_structure)
                           %span.icon= image_tag "cost_structure.png"
                           
                         %span
@@ -131,7 +131,7 @@
                         
                       %td#revenue_streams.col{:style => "", :width => "10%"}
                         %h2.editable{:style => ""} 
-                          %span= link_to t(".revenue_streams"), section_path(current_board.key, :revenue_streams)
+                          %span= link_to t(".revenue_streams"), section_board_path(current_board.key, :revenue_streams)
                           %span.icon= image_tag "revenue_streams.png"
                           
                         %span

@@ -10,11 +10,17 @@ BuissnessModelCanvas::Application.routes.draw do
   post 'invitations/invite' => 'invitations#invite', as: :invite
   
   # Board
-  get 'boards/new' => 'boards#new', as: :new_board
-  get 'boards/:key' => 'boards#show', as: :board
-  post 'boards/:key/update' => 'boards#update'
-  get 'board/:key/section/:handler' => 'boards#section', as: :section
+  put 'boards/:key' => 'boards#update'
+  resources :boards, only: [:new, :show] do
+    get 'sections/:handler' => 'boards#section', on: :member, as: :section
+  end
   
+  # TODO remove the following comments
+  # get 'boards/new' => 'boards#new', as: :new_board
+  # get 'boards/:key' => 'boards#show', as: :board
+  # post 'boards/:key' => 'boards#update'
+  # get 'board/:key/section/:handler' => 'boards#section', as: :section
+
   # Cards
   post 'cards/update' => 'cards#update'
   resources :cards do
