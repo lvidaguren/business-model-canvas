@@ -49,7 +49,7 @@ $(document).ready(function() {
 
 function editableStickyNotes() {
 	// Just to be REST but actualy we use the current_board method to get the current board
-	$('.edit').editable('/boards/' + $('#board_key').val(), {method: 'PUT', onblur : 'submit'});
+	$('.edit').editable('/boards/' + $('#board_key').val(), {method: 'PUT', onblur : 'submit', id : 'attribute'});
 	
 	$('.editable-title').editable('/cards/update', {onblur : 'submit'});
 	

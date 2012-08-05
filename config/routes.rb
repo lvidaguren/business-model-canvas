@@ -10,8 +10,7 @@ BuissnessModelCanvas::Application.routes.draw do
   post 'invitations/invite' => 'invitations#invite', as: :invite
   
   # Board
-  put 'boards/:key' => 'boards#update'
-  resources :boards, only: [:new, :show] do
+  resources :boards, only: [:new, :show, :update, :index] do
     get 'sections/:handler' => 'boards#section', on: :member, as: :section
   end
   

@@ -2,6 +2,10 @@ class BoardsController < ApplicationController
   after_filter :save_locale
   before_filter :authenticate_user
   
+  def index
+    @boards = current_user.boards  
+  end
+  
   def show
     @cards = current_board.cards.group_by(&:section) || []
   end
@@ -12,7 +16,7 @@ class BoardsController < ApplicationController
   end
   
   def update
-    current_board.update_attribute(params[:id], params[:value])
+    current_board.update_attribute(params[:attribute], params[:value])
     render :text => params[:value]
   end
   

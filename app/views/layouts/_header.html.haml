@@ -15,6 +15,20 @@
               = link_to t('.create_board'), new_board_path, class: 'menu-item'
             
             - if user_signed_in?
+              %li.dropdown
+                = link_to '#', class: 'dropdown-toggle menu-item', 'data-toggle' => 'dropdown' do
+                  = t('.boards')
+                  %span.caret
+                      
+                %ul.dropdown-menu
+                  - current_user.boards.each do |board|
+                    %li
+                      = link_to board.name, board_path(board.key)
+                  
+                  %hr
+                  
+                  %li= link_to t('.list_boards'), boards_path
+                                 
               %li
                 = link_to t('.invite'), '#invite', onclick: 'return false;', 'data-toggle' => 'modal', class: 'menu-item'
                 = render 'invitations/invite'

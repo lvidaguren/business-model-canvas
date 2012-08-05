@@ -1,0 +1,6 @@
+%h2= t('.boards')
+
+%table.table
+  - @boards.each do |board|
+    %tr
+      %td= link_to board.name, board_path(board)
