@@ -15,7 +15,8 @@ class Comment < ActiveRecord::Base
   # NOTE: Comments belong to a user
   belongs_to :user
   
-  after_create :send_comment_email
+  # TODO run in the background
+  # after_create :send_comment_email
   
   # Helper class method that allows you to build a comment
   # by passing a commentable object, a user_id, and comment text
