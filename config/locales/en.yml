@@ -12,6 +12,9 @@ en:
       select_language: 'Select language'
       welcome: 'Welcome %{email}'
       create_board: 'New Board'
+      members: 'Members'
+      boards: 'Boards'
+      list_boards: 'List all boards'
       
     footer:
       contact_us: 'Contact Us'
@@ -52,6 +55,9 @@ en:
     
     new:
       board_created: 'A new board is successfully created!'
+      
+    index:
+      boards: 'Boards'
       
   invitations:
     invite:

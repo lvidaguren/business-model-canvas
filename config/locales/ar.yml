@@ -7,6 +7,9 @@ ar:
       login: 'تسجيل الدخول'
       invite: 'دعوة أعضاء للوحة'
       create_board: 'لوحة جديدة'
+      members: 'اﻷعضاء'
+      boards: 'اللوحات'
+      list_boards: 'عرض كل اللوحات'
       
     footer:
       contact_us: 'اتصل بنا'
@@ -30,7 +33,7 @@ ar:
       
       designed_for: 'صممت لمشروع'
       designed_by: 'صممت بواسطة'
-      
+
     section:
       key_partners: 'الشركاء الرئيسيين'
       key_activities: 'الأنشطة الرئيسية'
@@ -46,7 +49,10 @@ ar:
   
     new:
       board_created: 'تم إنشاء لوحة جديدة بنجاح!'
-      
+    
+    index:
+      boards: 'اللوحات'
+        
   invitations:
     invite:
       invite: 'أرسل الدعوة'
@@ -55,7 +61,7 @@ ar:
   comments:
     comments_form:
       comment: 'أضف تعليق'
-  
+
   activerecord:
     attributes:
       user:

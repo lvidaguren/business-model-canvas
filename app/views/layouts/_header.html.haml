@@ -30,6 +30,10 @@
                   %li= link_to t('.list_boards'), boards_path
                                  
               %li
+                = link_to t('.members'), '#members', onclick: 'return false;', 'data-toggle' => 'modal', class: 'menu-item'
+                = render 'boards/members'
+                
+              %li
                 = link_to t('.invite'), '#invite', onclick: 'return false;', 'data-toggle' => 'modal', class: 'menu-item'
                 = render 'invitations/invite'
                 

@@ -1,0 +1,12 @@
+#members.modal.hide.fade.in
+  .modal-header
+    %button.close{'data-dismiss' => 'modal', type: 'button'} ×
+    %h3= t('layouts.header.members')
+    
+  .modal-body
+    %ul.members
+      - current_board.users.each do |user|
+        %li= user.email
+
+
+

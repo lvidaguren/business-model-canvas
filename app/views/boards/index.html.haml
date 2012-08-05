@@ -1,6 +1,7 @@
 %h2= t('.boards')
 
-%table.table
-  - @boards.each do |board|
-    %tr
-      %td= link_to board.name, board_path(board)
+.span6.offset3
+  %table.table.boards-listing
+    - @boards.each do |board|
+      %tr
+        %td= link_to board.name, board_path(board)
