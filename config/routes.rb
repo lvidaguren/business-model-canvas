@@ -23,9 +23,7 @@ BuissnessModelCanvas::Application.routes.draw do
   # Cards
   post 'cards/update' => 'cards#update'
   resources :cards do
-    member do
-      resources :comments, only: [:create, :index]
-    end
+    resources :comments, only: [:create, :index, :destroy]
   end
   
   # TODO remove the following comments

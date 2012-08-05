@@ -1,12 +1,16 @@
 %ul.comments-list
   - @comments.each do |comment|
-    %li{id: "comment_#{comment.id}"}
+    %li.well{id: "comment_#{comment.id}"}
       %b= "#{comment.user.email}: "
-      = comment.body
+      
+      - if comment.user == current_user
+        = link_to '×', card_comment_path(@card, comment), method: :delete, remote: true, class: 'close'
+        
+      = simple_format(comment.body)
 
 %hr
 
-= form_for comment = Comment.build_from(@card, current_user.try(:id), ''), url: comments_path(@card), remote: true, html: {class: 'form-horizontal'} do |f|
+= form_for comment = Comment.build_from(@card, current_user.try(:id), ''), url: card_comments_path(@card), remote: true, html: {class: 'form-horizontal'} do |f|
   = render 'layouts/errors', object: comment
   
   %fieldset
