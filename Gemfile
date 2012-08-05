@@ -14,6 +14,7 @@ gem 'omniauth-facebook'
 gem 'contact_us', '~> 0.4.0.beta'
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'acts_as_commentable_with_threading'
+gem 'imgkit'
 
 # Gems used only for assets and not required
 # in production environments by default.
