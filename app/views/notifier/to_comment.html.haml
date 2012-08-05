@@ -1,0 +1,7 @@
+%p
+  Hello #{@user.email}!
+  
+%p
+  A new comment was added to #{@card.title}. Follow #{link_to 'this', board_url(@card.board) } link to check the board. Here's the comment text:
+  
+%p= @comment
