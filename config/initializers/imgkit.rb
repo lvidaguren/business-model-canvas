@@ -5,3 +5,4 @@ IMGKit.configure do |config|
     "#{Rails.root}/wkhtmltoimage-i386"  
   end
 end
+

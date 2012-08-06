@@ -37,6 +37,9 @@
                 = link_to t('.invite'), '#invite', onclick: 'return false;', 'data-toggle' => 'modal', class: 'menu-item'
                 = render 'invitations/invite'
                 
+              %li
+                = link_to t('.download'), download_path
+                
           %ul.nav.pull-right
             %li.dropdown
               = link_to '#', class: 'dropdown-toggle menu-item', 'data-toggle' => 'dropdown' do

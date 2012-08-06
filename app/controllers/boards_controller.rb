@@ -29,6 +29,13 @@ class BoardsController < ApplicationController
     redirect_to board_path(board.key), notice: t('boards.new.board_created')
   end
   
+  def download
+    @cards = current_board.cards.group_by(&:section) || []
+    kit = IMGKit.new(render_to_string(:show, layout: false))
+    kit.stylesheets << 'abc.css' #StringIO.new(Rails.application.assets["application.css"].to_s)
+    send_data(kit.to_img, :type => 'image/jpeg', :disposition => 'inline')
+  end
+  
   protected
   def save_locale
     current_board.update_attribute(:locale, params[:locale]) if params[:locale] && params[:locale] != current_board.locale

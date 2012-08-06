@@ -14,6 +14,8 @@ BuissnessModelCanvas::Application.routes.draw do
     get 'sections/:handler' => 'boards#section', on: :member, as: :section
   end
   
+  get '/download' => 'boards#download', as: :download
+  
   # TODO remove the following comments
   # get 'boards/new' => 'boards#new', as: :new_board
   # get 'boards/:key' => 'boards#show', as: :board
