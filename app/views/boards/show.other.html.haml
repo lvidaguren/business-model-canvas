@@ -2,17 +2,17 @@
   .row
     .span4
       .well
-        %b= t('.name')
+        %b= t('boards.show.name')
         #name.edit= current_board.name
         
     .span4
       .well
-        %b= t('.designed_for')
+        %b= t('boards.show.designed_for')
         #designed_for.edit= current_board.designed_for
         
     .span4
       .well
-        %b= t('.designed_by')
+        %b= t('boards.show.designed_by')
         #designed_by.edit= current_board.designed_by
   
   .board-outline.resizable.ui-widget-content
@@ -24,7 +24,7 @@
               %tr
                 %td#key_partners.col.first{:rowspan => 3, :style => "", :width => "20%"}
                   %h2.editable{:style => ""} 
-                    %span= link_to t(".key_partners"), section_board_path(current_board.key, :key_partners)
+                    %span= link_to t("boards.show.key_partners"), section_board_path(current_board.key, :key_partners)
                     %span.icon= image_tag "#{current_host}/images/key_partners.png"
                     
                   %ul
@@ -33,7 +33,7 @@
                   
                 %td#key_activities.col{:style => "", :width => "20%"}
                   %h2.editable{:style => ""} 
-                    %span= link_to t(".key_activities"), section_board_path(current_board.key, :key_activities)
+                    %span= link_to t("boards.show.key_activities"), section_board_path(current_board.key, :key_activities)
                     %span.icon= image_tag "#{current_host}/images/key_activities.png"
                     
                   %ul
@@ -42,7 +42,7 @@
                 
                 %td#value_propositions.col{:rowspan => 3, :style => "", :width => "20%"}
                   %h2.editable{:style => ""} 
-                    %span= link_to t(".value_propositions"), section_board_path(current_board.key, :value_propositions)
+                    %span= link_to t("boards.show.value_propositions"), section_board_path(current_board.key, :value_propositions)
                     %span.icon= image_tag "#{current_host}/images/value_propositions.png"
                     
                   %ul
@@ -51,7 +51,7 @@
                     
                 %td#customer_relationships.col{:style => "", :width => "20%"}
                   %h2.editable{:style => ""} 
-                    %span= link_to t(".customer_relationships"), section_board_path(current_board.key, :customer_relationships)
+                    %span= link_to t("boards.show.customer_relationships"), section_board_path(current_board.key, :customer_relationships)
                     %span.icon= image_tag "#{current_host}/images/customer_relationships.png"
                     
                   %ul
@@ -60,7 +60,7 @@
   
                 %td#customer_segments.col{:rowspan => 3, :style => "", :width => "20%"}
                   %h2.editable{:style => ""} 
-                    %span= link_to t(".customer_segments"), section_board_path(current_board.key, :customer_segments)
+                    %span= link_to t("boards.show.customer_segments"), section_board_path(current_board.key, :customer_segments)
                     %span.icon= image_tag "#{current_host}/images/customer_segments.png"
                     
                   %ul
@@ -74,7 +74,7 @@
               %tr
                 %td#key_resources.col{:style => "", :width => "20%"}
                   %h2.editable{:style => ""} 
-                    %span= link_to t(".key_resources"), section_board_path(current_board.key, :key_resources)
+                    %span= link_to t("boards.show.key_resources"), section_board_path(current_board.key, :key_resources)
                     %span.icon= image_tag "#{current_host}/images/key_resources.png"
                     
                   %ul
@@ -83,7 +83,7 @@
                     
                 %td#channels.col{:style => "", :width => "20%"}
                   %h2.editable{:style => ""} 
-                    %span= link_to t(".channels"), section_board_path(current_board.key, :channels)
+                    %span= link_to t("boards.show.channels"), section_board_path(current_board.key, :channels)
                     %span.icon= image_tag "#{current_host}/images/channels.png"
                     
                   %ul
@@ -100,7 +100,7 @@
                       %tr
                         %td#cost_structure.first.col{:style => "", :width => "20%"}
                           %h2.editable{:style => ""} 
-                            %span= link_to t(".cost_structure"), section_board_path(current_board.key, :cost_structure)
+                            %span= link_to t("boards.show.cost_structure"), section_board_path(current_board.key, :cost_structure)
                             %span.icon= image_tag "#{current_host}/images/cost_structure.png"
                             
                           %ul
@@ -109,7 +109,7 @@
                           
                         %td#revenue_streams.col{:style => "", :width => "20%"}
                           %h2.editable{:style => ""} 
-                            %span= link_to t(".revenue_streams"), section_board_path(current_board.key, :revenue_streams)
+                            %span= link_to t("boards.show.revenue_streams"), section_board_path(current_board.key, :revenue_streams)
                             %span.icon= image_tag "#{current_host}/images/revenue_streams.png"
                             
                           %ul

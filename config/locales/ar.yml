@@ -10,7 +10,11 @@ ar:
       members: 'اﻷعضاء'
       boards: 'اللوحات'
       list_boards: 'عرض كل اللوحات'
-      
+      download: 'تنزيل'
+      png: 'تحميل PNG'
+      jpg: 'تحميل JPG'
+      pdf: 'تحميل PDF'
+        
     footer:
       contact_us: 'اتصل بنا'
       
@@ -52,7 +56,21 @@ ar:
     
     index:
       boards: 'اللوحات'
-        
+    
+    download:
+      not_valid_format: 'صيغة غير موجودة'
+      key_partners: 'الشركاء الرئيسيين'
+      key_activities: 'الأنشطة الرئيسية'
+      value_propositions: 'قيمة المقترحات'
+      customer_relationships: 'علاقات العملاء'
+      customer_segments: 'قطاعات العملاء'
+      key_resources: 'الموارد'
+      channels: 'القنوات'
+      cost_structure: 'التكلفة'
+      revenue_streams: 'الإيرادات'
+      designed_for: 'صممت لمشروع'
+      designed_by: 'صممت بواسطة'
+      
   invitations:
     invite:
       invite: 'أرسل الدعوة'

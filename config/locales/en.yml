@@ -15,6 +15,10 @@ en:
       members: 'Members'
       boards: 'Boards'
       list_boards: 'List all boards'
+      download: 'Download'
+      png: 'Export as PNG'
+      jpg: 'Export as JPG'
+      pdf: 'Export as PDF'
       
     footer:
       contact_us: 'Contact Us'
@@ -58,6 +62,20 @@ en:
       
     index:
       boards: 'Boards'
+      
+    download:
+      not_valid_format: 'Invalid format!'
+      key_partners: 'Key Partners'
+      key_activities: 'Key Activities'
+      value_propositions: 'Value Propositions'
+      customer_relationships: 'Customer Relationships'
+      customer_segments: 'Customer Segments'
+      key_resources: 'Key Resources'
+      channels: 'Channels'
+      cost_structure: 'Cost Structure'
+      revenue_streams: 'Revenue Streams'
+      designed_for: 'Designed for'
+      designed_by: 'Designed by'
       
   invitations:
     invite:
