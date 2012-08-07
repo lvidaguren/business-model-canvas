@@ -31,7 +31,7 @@ module ApplicationHelper
   end
   
   def current_host
-    if Rails.env == 'production'
+    if Rails.env.production?
       'http://businessmodelcanvas.herokuapp.com'
     else
       'http://localhost:3000'

@@ -2,6 +2,7 @@ class BoardsController < ApplicationController
   after_filter :save_locale
   before_filter :authenticate_user
   AVAILABLE_FORMATS = ['png', 'jpg', 'pdf']
+  IMAGES_FORMATS = ['png', 'jpg']
   
   def index
     @boards = current_user.boards  
@@ -35,7 +36,9 @@ class BoardsController < ApplicationController
     # Fetch the card of the board/section
     @cards = @section_name ? current_board.cards.where('section = ?', @section_name) : current_board.cards.group_by(&:section) || []
     
-    kit = IMGKit.new(render_to_string("#{params[:file]}.other.html.haml", layout: false), width: 1200, height: 1100)
+    html = render_to_string("#{params[:file]}.other.html.haml", layout: false)
+    kit = IMAGES_FORMATS.include?(params[:type]) ? IMGKit.new(html, width: 1200, height: 1100) : PDFKit.new(html, orientation: 'Portrait', page_size: 'A4')
+    
     kit.stylesheets << 'public/stylesheets/save.css'
     
     board, type = case params[:type]
@@ -44,7 +47,7 @@ class BoardsController < ApplicationController
       when 'jpg'
         [kit.to_jpg, 'image/jpg']
       when 'pdf'
-        [kit.to_jpg, 'application/pdf']
+        [kit.to_pdf, 'application/pdf']
     end 
     
     if AVAILABLE_FORMATS.include?(params[:type])
