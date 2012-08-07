@@ -1,0 +1,118 @@
+%div{style: 'padding-left: 20px; padding-top:10px; padding-right: 10px;'}
+  .row
+    .span4
+      .well
+        %b= t('.name')
+        #name.edit= current_board.name
+        
+    .span4
+      .well
+        %b= t('.designed_for')
+        #designed_for.edit= current_board.designed_for
+        
+    .span4
+      .well
+        %b= t('.designed_by')
+        #designed_by.edit= current_board.designed_by
+  
+  .board-outline.resizable.ui-widget-content
+    #board
+      %img#marker
+        %img#eraser
+          %table.board-table
+            %tbody
+              %tr
+                %td#key_partners.col.first{:rowspan => 3, :style => "", :width => "20%"}
+                  %h2.editable{:style => ""} 
+                    %span= link_to t(".key_partners"), section_board_path(current_board.key, :key_partners)
+                    %span.icon= image_tag "#{current_host}/images/key_partners.png"
+                    
+                  %ul
+                    = render :partial => "cards", :collection => @cards["key_partners"] || [], :as => :card, 
+                             :locals => {:left => :board_left, :top => :board_top, :truncate => true}
+                  
+                %td#key_activities.col{:style => "", :width => "20%"}
+                  %h2.editable{:style => ""} 
+                    %span= link_to t(".key_activities"), section_board_path(current_board.key, :key_activities)
+                    %span.icon= image_tag "#{current_host}/images/key_activities.png"
+                    
+                  %ul
+                    = render :partial => "cards", :collection => @cards["key_activities"] || [], :as => :card, 
+                             :locals => {:left => :board_left, :top => :board_top, :truncate => true}
+                
+                %td#value_propositions.col{:rowspan => 3, :style => "", :width => "20%"}
+                  %h2.editable{:style => ""} 
+                    %span= link_to t(".value_propositions"), section_board_path(current_board.key, :value_propositions)
+                    %span.icon= image_tag "#{current_host}/images/value_propositions.png"
+                    
+                  %ul
+                    = render :partial => "cards", :collection => @cards["value_propositions"] || [], :as => :card, 
+                             :locals => {:left => :board_left, :top => :board_top, :truncate => true}
+                    
+                %td#customer_relationships.col{:style => "", :width => "20%"}
+                  %h2.editable{:style => ""} 
+                    %span= link_to t(".customer_relationships"), section_board_path(current_board.key, :customer_relationships)
+                    %span.icon= image_tag "#{current_host}/images/customer_relationships.png"
+                    
+                  %ul
+                    = render :partial => "cards", :collection => @cards["customer_relationships"] || [], :as => :card, 
+                             :locals => {:left => :board_left, :top => :board_top, :truncate => true}
+  
+                %td#customer_segments.col{:rowspan => 3, :style => "", :width => "20%"}
+                  %h2.editable{:style => ""} 
+                    %span= link_to t(".customer_segments"), section_board_path(current_board.key, :customer_segments)
+                    %span.icon= image_tag "#{current_host}/images/customer_segments.png"
+                    
+                  %ul
+                    = render :partial => "cards", :collection => @cards["customer_segments"] || [], :as => :card, 
+                             :locals => {:left => :board_left, :top => :board_top, :truncate => true}
+              
+              %tr
+                %td.separator
+                %td.separator
+                  
+              %tr
+                %td#key_resources.col{:style => "", :width => "20%"}
+                  %h2.editable{:style => ""} 
+                    %span= link_to t(".key_resources"), section_board_path(current_board.key, :key_resources)
+                    %span.icon= image_tag "#{current_host}/images/key_resources.png"
+                    
+                  %ul
+                    = render :partial => "cards", :collection => @cards["key_resources"] || [], :as => :card, 
+                             :locals => {:left => :board_left, :top => :board_top, :truncate => true}
+                    
+                %td#channels.col{:style => "", :width => "20%"}
+                  %h2.editable{:style => ""} 
+                    %span= link_to t(".channels"), section_board_path(current_board.key, :channels)
+                    %span.icon= image_tag "#{current_host}/images/channels.png"
+                    
+                  %ul
+                    = render :partial => "cards", :collection => @cards["channels"] || [], :as => :card, 
+                             :locals => {:left => :board_left, :top => :board_top, :truncate => true}
+             
+              %tr
+                %td.separator{:colspan => 5}
+                
+              %tr
+                %td{:colspan => 5}
+                  %table.embedded-table
+                    %tbody
+                      %tr
+                        %td#cost_structure.first.col{:style => "", :width => "20%"}
+                          %h2.editable{:style => ""} 
+                            %span= link_to t(".cost_structure"), section_board_path(current_board.key, :cost_structure)
+                            %span.icon= image_tag "#{current_host}/images/cost_structure.png"
+                            
+                          %ul
+                            = render :partial => "cards", :collection => @cards["cost_structure"] || [], :as => :card, 
+                             :locals => {:left => :board_left, :top => :board_top, :truncate => true}
+                          
+                        %td#revenue_streams.col{:style => "", :width => "20%"}
+                          %h2.editable{:style => ""} 
+                            %span= link_to t(".revenue_streams"), section_board_path(current_board.key, :revenue_streams)
+                            %span.icon= image_tag "#{current_host}/images/revenue_streams.png"
+                            
+                          %ul
+                            = render :partial => "cards", :collection => @cards["revenue_streams"] || [], :as => :card, 
+                             :locals => {:left => :board_left, :top => :board_top, :truncate => true}
+                             

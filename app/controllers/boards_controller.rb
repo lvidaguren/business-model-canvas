@@ -1,6 +1,7 @@
 class BoardsController < ApplicationController
   after_filter :save_locale
   before_filter :authenticate_user
+  AVAILABLE_FORMATS = ['png', 'jpg', 'pdf']
   
   def index
     @boards = current_user.boards  
@@ -30,10 +31,27 @@ class BoardsController < ApplicationController
   end
   
   def download
-    @cards = current_board.cards.group_by(&:section) || []
-    kit = IMGKit.new(render_to_string(:show, layout: false))
-    kit.stylesheets << 'abc.css' #StringIO.new(Rails.application.assets["application.css"].to_s)
-    send_data(kit.to_img, :type => 'image/jpeg', :disposition => 'inline')
+    @section_name = params[:section_name] # section name
+    # Fetch the card of the board/section
+    @cards = @section_name ? current_board.cards.where('section = ?', @section_name) : current_board.cards.group_by(&:section) || []
+    
+    kit = IMGKit.new(render_to_string("#{params[:file]}.other.html.haml", layout: false), width: 1200, height: 1100)
+    kit.stylesheets << 'public/stylesheets/save.css'
+    
+    board, type = case params[:type]
+      when 'png'
+        [kit.to_png, 'image/png']
+      when 'jpg'
+        [kit.to_jpg, 'image/jpg']
+      when 'pdf'
+        [kit.to_jpg, 'application/pdf']
+    end 
+    
+    if AVAILABLE_FORMATS.include?(params[:type])
+      send_data(board, type: type, filename: "#{current_board.name}.#{params[:type]}")
+    else
+      redirect_to board_path(current_board), notice: t('.not_valid_format')
+    end
   end
   
   protected

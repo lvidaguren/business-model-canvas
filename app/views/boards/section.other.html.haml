@@ -1,0 +1,16 @@
+.board-outline
+  #board
+    %img#marker
+      %img#eraser
+        %table.board-table
+          %tbody
+            %tr
+              %td.col.section{:rowspan => 3, :style => "", :width => "10%"}
+                %h2 
+                  %span.section-title= t(".#{@section_name}")
+                  %span.icon= image_tag "#{current_host}/images/#{@section_name}.png"
+                  
+                %ul
+                  - p @cards, 'aaaaaaaaaaa'
+                  = render :partial => "cards", :collection => @cards, :as => :card,
+                           :locals => {:left => "section_left", :top => "section_top"}

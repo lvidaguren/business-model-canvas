@@ -29,4 +29,20 @@ module ApplicationHelper
       key
     end
   end
+  
+  def current_host
+    if Rails.env == 'production'
+      'http://businessmodelcanvas.herokuapp.com'
+    else
+      'http://localhost:3000'
+    end
+  end
+  
+  def download_params_for(type)
+    if URI(url_for(ony_path: false)).path.include?('sections')
+      {type: type, file: 'section', section_name: params[:handler]}
+    else
+      {type: type, file: 'show'}
+    end
+  end
 end

@@ -37,9 +37,16 @@
                 = link_to t('.invite'), '#invite', onclick: 'return false;', 'data-toggle' => 'modal', class: 'menu-item'
                 = render 'invitations/invite'
                 
-              %li
-                = link_to t('.download'), download_path
-                
+              %li.dropdown
+                = link_to '#', class: 'dropdown-toggle menu-item', 'data-toggle' => 'dropdown' do
+                  = t('.download')
+                  %span.caret
+                      
+                %ul.dropdown-menu
+                  %li= link_to t('.png'), board_download_path(current_board, download_params_for(:png))
+                  %li= link_to t('.jpg'), board_download_path(current_board, download_params_for(:jpg))
+                  %li= link_to t('.pdf'), board_download_path(current_board, download_params_for(:pdf))
+                  
           %ul.nav.pull-right
             %li.dropdown
               = link_to '#', class: 'dropdown-toggle menu-item', 'data-toggle' => 'dropdown' do
