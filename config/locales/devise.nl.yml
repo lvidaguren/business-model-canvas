@@ -1,0 +1,103 @@
+# Additional translations at https://github.com/plataformatec/devise/wiki/I18n
+
+nl:
+  errors:
+    messages:
+      expired: "is verlopen, gelieve er een nieuwe aan te vragen"
+      not_found: "niet gevonden"
+      already_confirmed: "is reeds bevestigd, gelieve aan te melden"
+      not_locked: "is niet geblokkeerd"
+      not_saved:
+        one: "1 fout voorkwam %{resource} om op te slaan:"
+        other: "%{count} fouten voorkwamen %{resource} om op te slaan:"
+
+  devise:
+    failure:
+      already_authenticated: 'U bent reeds aangemeld.'
+      unauthenticated: 'Gelieve u eerst aan te melden.'
+      unconfirmed: 'Gelieve eerst uw account te bevestigen.'
+      locked: 'Uw account is geblokkeerd.'
+      invalid: 'Wachtwoord of e-mailadres incorrect.'
+      invalid_token: 'Ongeldige authenticatie token.'
+      timeout: 'Uw sessie is verlopen, gelieve u opnieuw aan te melden om verder te gaan.'
+      inactive: 'Uw account is nog niet geactiveerd.'
+   
+    sessions:
+      signed_in: 'Aangemeld.'
+      signed_out: 'Afgemeld.'
+      new:
+        sign_in: 'Aanmelden'
+        
+    shared:
+      links:
+        forgot_your_password: 'Wachtwoord vergeten?'
+        receive_confirmation: "Bevestigingsinstructies niet ontvangen?"
+        sign_in: "Aanmelden"
+        sign_up: "Registreren"
+        
+    passwords:
+      send_instructions: 'U ontvangt weldra een e-mail met daarin de instructies om uw wachtwoord opnieuw in te stellen.'
+      updated: 'Uw wachtwoord is gewijzigd. U kan zich nu aanmelden.'
+      updated_not_active: 'Uw wachtwoord is gewijzigd.'
+      send_paranoid_instructions: "Indien uw e-mailadres bestaat in onze database, ontvangt u zodra een link om uw wachtwoord te herstellen."
+      no_token: "U hebt geen toegang tot deze pagina. Indien u uw wachtwoord wilt herstellen, controleer of u de volledige URL heeft overgenomen uit uw e-mail."
+   
+    confirmations:
+      send_instructions: 'U ontvangt weldra een e-mail met daarin de instructies om uw account te bevestigen.'
+      send_paranoid_instructions: "Indien uw e-mailadres bestaat in onze database, ontvangt u zodra een link om uw account te bevestigen."
+      confirmed: 'Uw account is geactiveerd. U kan zich nu aanmelden.'
+   
+    registrations:
+      signed_up: 'Welkom! U hebt zich succesvol geregistreerd!'
+      signed_up_but_unconfirmed: 'Een e-mail met daarin een bevestigingslink is verstuurd naar uw e-mailadres. Klik op de link om uw account te activeren.'
+      signed_up_but_inactive: 'U hebt zich succesvol geregistreerd. U kan echter nog niet aanmelden omdat uw account nog niet bevestigd is.'
+      signed_up_but_locked: 'U hebt zich succesvol geregistreerd. U kan echter nog niet aanmelden omdat uw account geblokkeerd is.'
+      updated: 'U hebt uw account succesvol geüpdatet.'
+      update_needs_confirmation: "U hebt uw account succesvol geüpdatet, maar we moeten uw nieuw e-mailadres verifiëren. Gelieve uw inbox te raadplegen en te klikken op de bevestigingslink die u toegestuurd krijgt op uw nieuw e-mailadres."
+      destroyed: 'Vaarwel! Uw account is verwijdert. We hopen je snel terug te zien.'
+      new:
+        sign_up: 'Registreren'
+      edit:
+        edit_profile: 'Profiel bewerken'
+        update_profile: 'Profiel aanvullen'
+        cancel_my_account: 'Verwijder mijn acccount'
+        unhappy: 'Niet tevreden?'
+        leave_blank: "(laat leeg indien u dit niet wenst te veranderen)"
+        need_current_password: '(we hebben uw huidig wachtwoord nodig om de wijzigingen door te voeren)'
+        
+    unlocks:
+      send_instructions: 'U zal binnen enkele minuten een e-mail krijgen met daarin de instructies over hoe uw account te deblokkeren.'
+      unlocked: 'Uw account is succesvol gedeblokkeerd. Meld u aan om verder te gaan.'
+      send_paranoid_instructions: 'Indien uw account bestaat, zal u binnen enkele minuten een e-mail krijgen met daarin de instructies over hoe uw account te deblokkeren.'
+   
+    omniauth_callbacks:
+      success: '%{kind} succesvol geauthenticeerd.'
+      failure: '%{kind} kon niet worden geauthenticeerd vanwege "%{reason}".'
+   
+    mailer:
+      confirmation_instructions:
+        subject: 'Bevestigingsinstructies'
+      reset_password_instructions:
+        subject: 'Instructies over het herstellen van uw wachtwoord'
+      unlock_instructions:
+        subject: 'Deblokkeringsinstructies'
+      invitation_instructions:
+        subject: 'Instructies'
+        
+    invitations:
+      send_instructions: 'De uitnodiging(en) is/zijn verstuurd!'
+      invitation_token_invalid: 'Het token van de uitnodiging is niet geldig!'
+      updated: 'Uw wachtwoord is gewijzigd. U kan zich nu aanmelden.'
+      no_invitations_remaining: "U kan geen uitnodigingen meer sturen"
+      new:
+        header: "Verzend uitnodigingen"
+        submit_button: "Verzenden"
+      edit:
+        header: "Stel uw wachtwoord in"
+        submit_button: "Stel mijn wachtwoord in"
+        
+    login:
+      signin: 'Aanmelden'
+      sign_up: 'Registreren'
+
+

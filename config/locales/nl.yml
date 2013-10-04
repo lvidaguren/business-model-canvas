@@ -1,0 +1,103 @@
+nl:
+  recaptcha:
+    errors:
+      incorrect-captcha-sol: 'Fout in ReCAPTCHA!'
+      
+  layouts:
+    header:
+      languages: 'Taal'
+      select_language: 'Kies uw taal'
+      welcome: 'Welkom %{email}'
+      create_board: 'Nieuw bord'
+      members: 'Leden'
+      boards: 'Borden'
+      list_boards: 'Toon alle borden'
+      download: 'Download'
+      png: 'Exporteer als PNG'
+      jpg: 'Exporteer als JPG'
+      pdf: 'Exporteer als PDF'
+      
+    footer:
+      contact_us: 'Contacteer ons'
+      
+  warning:
+    your_board_is_public: 'Uw bord is openbaar en iedereen kan dit bewerken! Meld u aan om de toegang tot uw bord te bewerken.'
+    private_board: "U hebt geen toegang tot dit bord!"
+      
+  boards:
+    show:
+      key_partners: 'Belangrijke partners'
+      key_activities: 'Kernactiviteiten'
+      value_propositions: 'Waardeproposities'
+      customer_relationships: 'Klantenrelaties'
+      customer_segments: 'Klantsegmenten'
+      key_resources: 'Belangrijke bronnen'
+      channels: 'Kanalen'
+      cost_structure: 'Koststructuur'
+      revenue_streams: 'Inkomsten'
+      
+      add_card: 'Voeg notitie toe'
+      
+      designed_for: 'Gemaakt voor'
+      designed_by: 'Gemaakt door'
+   
+    section:
+      key_partners: 'Belangrijke partners'
+      key_activities: 'Kernactiviteiten'
+      value_propositions: 'Waardeproposities'
+      customer_relationships: 'Klantenrelaties'
+      customer_segments: 'Klantsegmenten'
+      key_resources: 'Belangrijke bronnen'
+      channels: 'Kanalen'
+      cost_structure: 'Koststructuur'
+      revenue_streams: 'Inkomsten'
+      
+      add_card: 'Voeg notitie toe'
+      
+
+    new:
+      board_created: 'Uw nieuw bord is succesvol aangemaakt.'
+      
+    index:
+      boards: 'Borden'
+      
+    download:
+      not_valid_format: 'Fout bestandsformaat!'
+      key_partners: 'Belangrijke partners'
+      key_activities: 'Kernactiviteiten'
+      value_propositions: 'Waardeproposities'
+      customer_relationships: 'Klantenrelaties'
+      customer_segments: 'Klantsegmenten'
+      key_resources: 'Belangrijke bronnen'
+      channels: 'Kanalen'
+      cost_structure: 'Koststructuur'
+      revenue_streams: 'Inkomsten'
+      designed_for: 'Gemaakt voor'
+      designed_by: 'Gemaakt door'
+      
+  invitations:
+    invite:
+      invite: 'Uitnodigen'
+      enter_memebers_emails: 'Voeg e-mailadressen toe van mensen die u wilt uitnodigen. Scheid de adressen van elkaar met ";"'
+      
+  comments:
+    comments_form:
+      comment: 'Reactie'
+  
+  activerecord:
+    attributes:
+      user:
+        email: 'Email'
+        password: ' Wachtwoord'
+        password_confirmation: 'Herhaal wachtwoord'
+        remember_me: 'Laat mij aangemeld blijven'
+        current_password: 'Huidig wachtwoord'
+          
+      comment:
+        body: 'Reactie'
+        
+  actions:
+    back: 'Terug'
+    are_you_sure: 'Weet u het zeker?'
+    
+

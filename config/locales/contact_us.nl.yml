@@ -1,0 +1,31 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+nl:
+  contact_us:
+    contact_mailer:
+      contact_email:
+        sent_by_contact_form: 'Verzonden vanuit het contacteerformulier van %{email}'
+        sent_by_name: 'Verstuurd door %{name} met %{email} als e-mailadres'
+        subject: 'Contacteer ons bericht van %{email}'
+    
+    contacts:
+      new: &new
+        contact_us: 'Contacteer ons'
+        email: 'E-mail'
+        message: 'Bericht'
+        name: 'Naam'
+        subject: 'Onderwerp'
+        captcha: 'CAPTCHA'
+        submit: 'Verstuur'
+        send_us_email: 'U kan ons ook een e-mail sturen op'
+        fill_in_the_form: 'of vul onderstaand formulier in:'
+        
+      new_formtastic:
+        <<: *new
+      new_simple_form:
+        <<: *new
+    
+    notices:
+      error: 'Vul alle verplichte velden in!'
+      success: 'Bericht verzonden.'

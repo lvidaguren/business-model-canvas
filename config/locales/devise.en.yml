@@ -31,8 +31,8 @@ en:
     shared:
       links:
         forgot_your_password: 'Forgot your password?'
-        receive_confirmation: "Didn't reveive confirmation instructions?"
-        sign_in: "Sign inj"
+        receive_confirmation: "Didn't receive confirmation instructions?"
+        sign_in: "Sign in"
         sign_up: "Sign up"
         
     passwords:
